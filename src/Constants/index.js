@@ -132,7 +132,7 @@ export const expCards = [
   {
     review:
       "Elijah brought creativity and technical expertise to my team, significantly improving our frontend performance. Elijah's work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
+    // imgPath: "/images/exp1.png",
     logoPath: "/images/logo1.png",
     title: "Frontend Developer",
     date: "January 2024 - April 2024",
@@ -145,7 +145,7 @@ export const expCards = [
   {
     review:
       "Elijah played a key role in designing and building a modern React admin dashboard that was both functional and visually polished. The dashboard improved internal workflows and data visibility, demonstrating Elijah's ability to create scalable, efficient, and user-friendly admin tools",
-    imgPath: "/images/exp2.png",
+    // imgPath: "/images/exp2.png",
     logoPath: "/images/logo2.png",
     title: "React Native Developer",
     date: "June 2020 - December 2023",
