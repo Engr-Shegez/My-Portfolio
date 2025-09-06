@@ -123,7 +123,7 @@ export default function ShowcaseSection() {
             <div className="project" ref={project2Ref}>
               <div className="imagewrapper bg-[#fffe7db]">
                 <img
-                  src="/images/project2.png"
+                  src="/images/e-commerce.png"
                   alt="Library Management Platform"
                 />
               </div>
