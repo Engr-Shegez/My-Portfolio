@@ -58,10 +58,8 @@ export default function Hero() {
                 </span>
               </h1>
               <h1>
-                that work's as beautifully as <br />
-                they look where clean
-                <br />
-                code meets creative intent.
+                where functionality meets form and clean code seamlessly
+                embodies creative vision.
               </h1>
             </div>
             <p className="text-white-50 md:text-xl relative z-10 font-bold pointer-events-none">
