@@ -122,12 +122,11 @@ export default function ShowcaseSection() {
 
             <div className="project" ref={project2Ref}>
               <div className="imagewrapper bg-[#fffe7db]">
-                <img
-                  src="/images/e-commerce.png"
-                  alt="Library Management Platform"
-                />
+                <img src="/images/e-commerce.png" alt="Nova Store" />
               </div>
-              <h2 className="pl-2 pb-5">Library Management Platform</h2>
+              <h2 className="pl-2 pb-5">
+                Nova Store – E-Commerce App with Stripe Payments
+              </h2>
               <div className="flex gap-5 pl-2">
                 <a href="#contact">
                   <div className="px-5 py-2 rounded-lg bg-white text-black-100 hover:bg-black-50 transition-colors duration-300 hover:text-white w-39 font-semibold flex justify-center gap-1 h-10">
