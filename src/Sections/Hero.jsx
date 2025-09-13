@@ -35,7 +35,7 @@ export default function Hero() {
       <div className="hero-layout">
         {/* left; hero content */}
         <header className="flex flex-col justify-center md:w-full w-screen  md:px-20 px-5">
-          <div className="flex flex-col gap-7">
+          <div className="flex flex-col gap-6">
             <div className="hero-text">
               <h1>
                 Building
@@ -58,8 +58,9 @@ export default function Hero() {
                 </span>
               </h1>
               <h1>
-                where functionality meets form and clean code seamlessly
-                embodies creative vision.
+                where functionality meets <br /> form and clean code <br />
+                seamlessly embodies <br />
+                creative vision.
               </h1>
             </div>
             <p className="text-white-50 md:text-xl relative z-10 font-bold pointer-events-none">

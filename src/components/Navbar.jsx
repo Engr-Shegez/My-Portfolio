@@ -35,12 +35,12 @@ export default function Navbar() {
         </nav>
         <div className="flex gap-5">
           <a href="#contact">
-            <div className="px-5 py-2 rounded-lg bg-stone-900 text-white hover:bg-white-50 transition-colors duration-300 hover:text-black-100">
+            <div className="px-5 py-2 rounded-lg ml-2 bg-stone-900 text-white hover:bg-white-50 transition-colors duration-300 hover:text-black-100">
               <span>Resume</span>
             </div>
           </a>
           <a href="#contact" className="contact-btn group">
-            <div className="inner ">
+            <div className="px-4 py-1 -ml-2 rounded-lg bg-stone-900 text-white hover:bg-white-50 transition-colors duration-300 hover:text-black-100 whitespace-nowrap">
               <span>Contact me</span>
             </div>
           </a>
