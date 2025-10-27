@@ -1,12 +1,12 @@
 export const words = [
   { text: "Interfaces", imgPath: "/images/ideas.svg" },
-  { text: "Products", imgPath: "/images/arrow-down.svg" },
-  { text: "UI's", imgPath: "/images/arrow-right.svg" },
+  { text: "Products", imgPath: "/images/check.svg" },
+  { text: "UI's", imgPath: "/images/arrow-up-green.svg" },
   { text: "Websites", imgPath: "/images/concepts.svg" },
   { text: "designs", imgPath: "/images/designs.svg" },
   { text: "Pages", imgPath: "/images/code.svg" },
-  { text: "Components", imgPath: "/images/x.svg" },
-  { text: "Layouts", imgPath: "/images/concepts.svg" },
+  { text: "Components", imgPath: "/images/users.svg" },
+  { text: "Layouts", imgPath: "/images/blue-check.svg" },
 ];
 
 export const counterItems = [

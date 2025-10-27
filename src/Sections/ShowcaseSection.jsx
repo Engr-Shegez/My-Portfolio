@@ -93,9 +93,9 @@ export default function ShowcaseSection() {
           <div className="project-list-wrapper overflow-hidden">
             <div className="project " ref={quizprojectRef}>
               <div className="imagewrapper bg-[#fffefdb] relative">
-                <img src="/images/quiz-project.png" alt="React Quiz app" />
+                <img src="/images/dashboard.png" alt="React Quiz app" />
               </div>
-              <h2 className="pl-2 pb-5">React quiz</h2>
+              <h2 className="pl-2 pb-5">A Travel Agency - React Dashboard</h2>
               <div className="flex gap-5 pl-2">
                 <a href="#contact">
                   <div className="px-5 py-2 rounded-lg bg-white text-black-100 hover:bg-black-50 transition-colors duration-300 hover:text-white w-39 h-10 font-semibold flex justify-center gap-1">
