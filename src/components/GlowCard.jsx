@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
 
-export default function GlowCard({ card, children, index }) {
-  const cardRefs = useRef([]);
+export default function GlowCard({ card, children }) {
+  const cardRef = useRef(null);
 
-  const handleMouseMove = (index) => (e) => {
-    const card = cardRefs.current[index];
+  const handleMouseMove = (e) => {
+    const card = cardRef.current;
     if (!card) return;
 
     //Get the mouse position relative to the card
@@ -22,8 +22,8 @@ export default function GlowCard({ card, children, index }) {
 
   return (
     <div
-      ref={(el) => (cardRefs.current[index] = el)}
-      onMouseMove={handleMouseMove(index)}
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
       className="card card-border timeline-card rounded-xl p-10 mb-5 break-inside-avoid-column "
     >
       <div className="glow" />

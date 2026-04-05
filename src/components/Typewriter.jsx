@@ -6,18 +6,25 @@ export default function Typewriter({ text, speed = 60, className = "" }) {
 
   useEffect(() => {
     let i = 0;
+    let timeoutId;
     setDisplayed("");
     setShowCursor(true);
+
     const type = () => {
       if (i <= text.length) {
         setDisplayed(text.slice(0, i));
         i++;
-        setTimeout(type, speed);
+        timeoutId = window.setTimeout(type, speed);
       }
     };
+
     type();
     const cursorInterval = setInterval(() => setShowCursor((c) => !c), 500);
-    return () => clearInterval(cursorInterval);
+
+    return () => {
+      clearInterval(cursorInterval);
+      window.clearTimeout(timeoutId);
+    };
   }, [text, speed]);
 
   return (

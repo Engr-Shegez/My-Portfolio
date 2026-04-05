@@ -11,10 +11,16 @@ export default function HeroExperience() {
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   return (
-    <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
+    <Canvas
+      frameloop="demand"
+      dpr={[1, 1.5]}
+      gl={{ antialias: false, powerPreference: "high-performance" }}
+      camera={{ position: [0, 0, 15], fov: 45 }}
+    >
       <OrbitControls
         enablePan={false}
         enableZoom={!isTablet}
+        enableDamping={false}
         maxDistance={20}
         minDistance={5}
         minPolarAngle={Math.PI / 5}

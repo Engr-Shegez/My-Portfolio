@@ -1,11 +1,14 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import Typewriter from "../components/Typewriter";
 import { words } from "../Constants";
 import Button from "../components/Button";
-import HeroExperience from "../components/HeroModules/HeroExperience";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import AnimatedCounter from "../components/AnimatedCounter";
+
+const HeroExperience = lazy(() =>
+  import("../components/HeroModules/HeroExperience"),
+);
 
 export default function Hero() {
   useGSAP(() => {
@@ -80,7 +83,9 @@ export default function Hero() {
 
         <figure>
           <div className="hero-3d-layout ">
-            <HeroExperience />
+            <Suspense fallback={<div className="h-full w-full" />}>
+              <HeroExperience />
+            </Suspense>
           </div>
         </figure>
       </div>
