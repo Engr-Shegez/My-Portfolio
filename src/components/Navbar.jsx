@@ -41,7 +41,7 @@ export default function Navbar() {
             href="/Adeleke CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 bg-black text-white rounded-md"
+            className="px-4 py-2  text-white rounded-md"
           >
             <div className="px-5 py-2 rounded-lg ml-2 bg-stone-900 text-white hover:bg-white-50 transition-colors duration-300 hover:text-black-100">
               <span>Resume</span>
@@ -49,9 +49,9 @@ export default function Navbar() {
           </a>
           <a
             href="#contact"
-            className="contact-btn group px-4 py-2 bg-black text-white rounded-md"
+            className="contact-btn group px-4 py-2  text-white rounded-md"
           >
-            <div className="px-4 py-1 -ml-2 rounded-lg bg-stone-900 text-white hover:bg-white-50 transition-colors duration-300 hover:text-black-100 whitespace-nowrap">
+            <div className="px-5 py-2 -ml-2 rounded-lg bg-stone-900 text-white hover:bg-white-50 transition-colors duration-300 hover:text-black-100 whitespace-nowrap">
               <span>Contact me</span>
             </div>
           </a>
