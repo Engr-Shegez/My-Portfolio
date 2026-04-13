@@ -101,11 +101,15 @@ export default function ShowcaseSection() {
           <div className="project-list-wrapper overflow-hidden">
             <div className="project " ref={quizprojectRef}>
               <div className="imagewrapper bg-[#fffefdb] relative">
-                <img src="/images/dashboard.png" alt="React DashBoard" />
+                <img src="/images/download.png" alt="React DashBoard" />
               </div>
               <h2 className="pl-2 pb-5">A Travel Agency - React Dashboard</h2>
               <div className="flex gap-5 pl-2">
-                <a href="#contact">
+                <a
+                  href="https://github.com/Engr-Shegez/Travel-agency-admin-dashboard.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className="px-5 py-2 rounded-lg bg-white text-black-100 hover:bg-black-50 transition-colors duration-300 hover:text-white w-39 h-10 font-semibold flex justify-center gap-1">
                     <img
                       src="/images/github.png"
@@ -115,7 +119,11 @@ export default function ShowcaseSection() {
                     <span>View Code</span>
                   </div>
                 </a>
-                <a href="#contact">
+                <a
+                  href="https://travel-agency-admin-dashboard.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className="px-5 py-2 rounded-lg bg-white text-black-100 hover:bg-black-50 transition-colors duration-300 hover:text-white w-39 h-10 font-semibold flex justify-center gap-1">
                     <img
                       src="/images/concepts.svg"
