@@ -51,22 +51,19 @@ export default function ShowcaseSection() {
           {/* LEFT SIDE */}
           <div className="first-project-wrapper" ref={binglebeamRef}>
             <div className="imagewrapper">
-              <img src="/images/binglebeam.png" alt="Bingle-Beam" />
+              <img src="/images/aiworkspace.png" alt="Bingle-Beam" />
             </div>
             <div className="text-content">
-              <h2>
-                BingleBeam: A Dynamic Streaming Platform for Curated Movie
-                Discovery
-              </h2>
+              <h2>Thredline — The AI-Powered Workspace</h2>
               <p className="text-white-50 md:text-xl">
-                BingleBeam is a responsive streaming app built with React,
-                designed for personalized movie discovery and smooth user
-                interaction. It features dynamic content, category browsing, and
-                an engaging modern UI.
+                An AI workspace built with NextJs, designed for seamless
+                productivity and intelligent content generation. It features
+                dynamic AI tools, smooth user interaction, and a modern
+                responsive UI.
               </p>
               <div className="flex gap-5">
                 <a
-                  href="https://github.com/Engr-Shegez/BingleBeam.git"
+                  href="https://github.com/Engr-Shegez/Ai-workspace.git"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -80,7 +77,7 @@ export default function ShowcaseSection() {
                   </div>
                 </a>
                 <a
-                  href="https://bingle-beam.vercel.app/"
+                  href="https://ai-workspace-theta.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
