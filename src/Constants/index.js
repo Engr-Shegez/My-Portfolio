@@ -11,9 +11,9 @@ export const words = [
 
 export const counterItems = [
   { value: 3, suffix: "+", label: "Years of Experience" },
-  { value: 20, suffix: "+", label: "Satisfied clients" },
-  { value: 10, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
+  { value: 20, suffix: "+", label: "Personal Project Built" },
+  { value: 5, suffix: "+", label: "Full Stack Web-App" },
+  { value: 90, suffix: "%", label: "Projects successfully deployed" },
 ];
 
 export const navLinks = [
@@ -144,17 +144,17 @@ export const expCards = [
   },
   {
     review:
-      "Elijah played a key role in designing and building a modern React admin dashboard that was both functional and visually polished. The dashboard improved internal workflows and data visibility, demonstrating Elijah's ability to create scalable, efficient, and user-friendly admin tools",
+      "Elijah led the development of a modern SaaS analytics dashboard using Next.js, delivering a highly responsive and data-driven platform for business insights. The system enhanced decision-making by providing clear data visualization, real-time metrics, and an intuitive user experience, showcasing his ability to build scalable and production-ready applications.",
     // imgPath: "/images/exp2.png",
     logoPath: "/images/logo2.png",
-    title: "React Native Developer",
+    title: "Next.js Developer",
     date: "June 2020 - December 2023",
     responsibilities: [
-      "Designed and developed a responsive admin dashboard using React and modern UI libraries (e.g., Material UI, Tailwind CSS).",
-      "Implemented dynamic data tables, charts, and user management features to enhance data oversight and usability.",
-      "Integrated RESTful APIs for real-time data rendering and CRUD operations.",
-      "Optimized performance through lazy loading, memoization, and component-level caching.",
-      "Ensured role-based access control and secure authentication for admin users.",
+      "Designed and developed a scalable SaaS dashboard for business analytics using Next.js and modern UI frameworks.",
+      "Implemented interactive charts, KPI tracking, and data visualization tools to provide actionable insights.",
+      "Integrated RESTful APIs for real-time data synchronization and business reporting.",
+      "Built optimized server-side and client-side rendering strategies for performance and SEO.",
+      "Developed secure authentication systems and role-based access control for multi-user environments.",
     ],
   },
   {
@@ -191,45 +191,45 @@ export const expLogos = [
 
 export const testimonials = [
   {
-    name: "Esther Howard",
-    mentions: "@estherhoward",
+    name: "Sarah Chen",
+    mentions: "Frontend Mentor & Coding Bootcamp Instructor",
     review:
-      "I can’t say enough good things about Elijah. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
+      "I can’t say enough good things about Elijah. He has a great eye for clean, responsive design and picks up New concerpts quickly",
     imgPath: "/images/client1.png",
   },
   {
-    name: "Wade Warren",
-    mentions: "@wadewarren",
+    name: "David Christopher",
+    mentions: "Fellow Developer (Grouped Project)",
     review:
       "Working with Elijah was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
     imgPath: "/images/client3.png",
   },
   {
-    name: "Guy Hawkins",
-    mentions: "@guyhawkins",
+    name: "Oluwatobi Adebayo",
+    mentions: "Frontend Mentor & Coding Bootcamp instructor",
     review:
-      "Collaborating with Elijah was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Elijah's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Elijah is the ideal partner.",
+      "Elijah's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Elijah is the ideal partner.",
     imgPath: "/images/client2.png",
   },
   {
-    name: "Marvin McKinney",
-    mentions: "@marvinmckinney",
+    name: "Ngozi Eze",
+    mentions: "Bootcamp Teaching Assistant",
     review:
-      "Elijah was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
+      "He always writes readable, well documented code and solves bugs efficiently. Collaborating with him on our Full-stack project was smooth and enjoyable",
     imgPath: "/images/client5.png",
   },
   {
-    name: "Floyd Miles",
-    mentions: "@floydmiles",
+    name: "Tolani Adeyemi",
+    mentions: "Collegue & Group Project Partner",
     review:
-      "Elijah’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
+      "Elijah’s expertise in web development is truly impressive. He is a quick learner who isn't afraid to dive into new technologies like Next.js and Tailwind.",
     imgPath: "/images/client4.png",
   },
   {
-    name: "Albert Flores",
-    mentions: "@albertflores",
+    name: "Emeka Uche",
+    mentions: "Teaching Assistant & Local Tech Meetup",
     review:
-      "Elijah was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
+      "I was really impressed by Elijah's clean component structure and attention to performance. He has bright potential in web development.",
     imgPath: "/images/client6.png",
   },
 ];

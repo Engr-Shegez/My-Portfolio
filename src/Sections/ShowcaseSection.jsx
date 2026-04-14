@@ -56,10 +56,11 @@ export default function ShowcaseSection() {
             <div className="text-content">
               <h2>Thredline — The AI-Powered Workspace</h2>
               <p className="text-white-50 md:text-xl">
-                An AI workspace built with NextJs, designed for seamless
-                productivity and intelligent content generation. It features
-                dynamic AI tools, smooth user interaction, and a modern
-                responsive UI.
+                A modern AI-powered workspace designed to centralize intelligent
+                workflows into a single, seamless interface. Thredline enables
+                users to interact with AI, manage conversations, and streamline
+                productivity through a clean, responsive, and scalable system
+                architecture.
               </p>
               <div className="flex gap-5">
                 <a
