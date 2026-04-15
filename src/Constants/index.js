@@ -131,15 +131,15 @@ export const techStackIcons = [
 export const expCards = [
   {
     review:
-      "Elijah brought creativity and technical expertise to my team, significantly improving our frontend performance. Elijah's work has been invaluable in delivering faster experiences.",
-    // imgPath: "/images/exp1.png",
+      "I leveraged creativity and technical expertise to enhance frontend performance, delivering faster and more efficient user experiences.",
+    imgPath: "/images/metricly-logo.png",
     logoPath: "/images/logo1.png",
     title: "Frontend Developer",
     date: "January 2024 - April 2024",
     responsibilities: [
-      "Developed and maintained user-facing features for an Uber Clone app.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Built and maintained scalable user-facing features for a SaaS business analytics platform.",
+      "Led the UI/UX design, crafting intuitive dashboards and data visualization experiences.",
+      "Enhanced performance and scalability for handling complex, high-volume data workflows.",
     ],
   },
   {
