@@ -66,25 +66,36 @@ export default function Navbar() {
                 Resume
               </a>
 
-              <a
-                href="#contact"
-                className="px-4 py-2 rounded-full bg-black text-white text-sm hover:bg-zinc-800"
-              >
-                Contact
-              </a>
+              <button className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-green-500/30 bg-green-500/10 text-green-400 text-sm font-medium backdrop-blur-sm">
+                {/* Glowing Dot */}
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping"></span>
+                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500 animate-pulse shadow-[0_0_10px_3px_rgba(34,197,94,0.6)]"></span>
+                </span>
+                Available
+              </button>
             </div>
 
             {/* MOBILE BUTTON */}
-            <button
-              onClick={() => setIsOpen((prev) => !prev)}
-              className={`md:hidden inline-flex size-10 items-center justify-center rounded-full transition-colors duration-300 ${
-                showNavbarSurface
-                  ? "border border-white/10 bg-zinc-700"
-                  : "border border-white/20 bg-black/20"
-              }`}
-            >
-              {isOpen ? <X size={18} /> : <Menu size={18} />}
-            </button>
+            <div className="md:hidden flex items-center gap-3">
+              {/* Availability Dot */}
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping"></span>
+                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500"></span>
+              </span>
+
+              {/* Hamburger */}
+              <button
+                onClick={() => setIsOpen((prev) => !prev)}
+                className={`inline-flex size-10 items-center justify-center rounded-full transition-colors duration-300 ${
+                  showNavbarSurface
+                    ? "border border-white/10 bg-zinc-700"
+                    : "border border-white/20 bg-black/20"
+                }`}
+              >
+                {isOpen ? <X size={18} /> : <Menu size={18} />}
+              </button>
+            </div>
           </div>
 
           {/* MOBILE MENU */}
@@ -133,3 +144,10 @@ export default function Navbar() {
     </header>
   );
 }
+
+<a
+  href="#contact"
+  className="px-4 py-2 rounded-xl text-center bg-black hover:bg-zinc-700 text-white"
+>
+  Contact
+</a>;
