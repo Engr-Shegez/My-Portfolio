@@ -6,8 +6,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import AnimatedCounter from "../components/AnimatedCounter";
 
-const HeroExperience = lazy(() =>
-  import("../components/HeroModules/HeroExperience"),
+const HeroExperience = lazy(
+  () => import("../components/HeroModules/HeroExperience"),
 );
 
 export default function Hero() {
@@ -25,7 +25,7 @@ export default function Hero() {
         duration: 1.5,
         ease: "power2.inOut",
       },
-      {}
+      {},
     );
   });
 
@@ -37,7 +37,7 @@ export default function Hero() {
 
       <div className="hero-layout">
         {/* left; hero content */}
-        <header className="flex flex-col justify-center md:w-full w-screen  md:px-20 px-5">
+        <header className="flex flex-col justify-center md:w-full w-screen pt-18 md:pt-20 lg:pt-0 md:px-20 px-5">
           <div className="flex flex-col gap-6">
             <div className="hero-text">
               <h1>

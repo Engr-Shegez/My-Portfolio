@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const showNavbarSurface = scrolled || isOpen;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,18 +21,23 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="sticky overflow-hidden top-0 z-50  dark:bg-transparent backdrop-blur-md  left-0 right-0 px-2 sm:px-4  border-slate-100 ">
+    <header className="fixed top-0 left-0 right-0 z-50 px-2 sm:px-4">
       <div className="mx-auto max-w-7xl px-6 pt-2">
         <div
-          className={`relative rounded-full px-4 backdrop-blur-xl transition-all duration-300
-          ${
-            scrolled
-              ? " shadow-[0_18px_60px_rgba(0,0,0,0.08)]"
-              : "bg-transparent"
+          className={`relative rounded-[2rem] px-4 transition-all duration-300 ${
+            showNavbarSurface
+              ? "bg-black/70 shadow-[0_18px_60px_rgba(0,0,0,0.28)] backdrop-blur-xl"
+              : "bg-black/50 shadow-none backdrop-blur-0"
           }`}
         >
           {/* TOP BAR */}
-          <div className="flex items-center justify-between border rounded-full p-3  gap-4">
+          <div
+            className={`flex items-center justify-between gap-4 rounded-full p-3 transition-all duration-300 ${
+              showNavbarSurface
+                ? "border border-white/10"
+                : "border border-transparent"
+            }`}
+          >
             <a
               className="text-lg font-semibold tracking-tight text-zinc-100"
               href="#hero"
@@ -71,7 +77,11 @@ export default function Navbar() {
             {/* MOBILE BUTTON */}
             <button
               onClick={() => setIsOpen((prev) => !prev)}
-              className="md:hidden inline-flex size-10 items-center justify-center rounded-full border border-black/10 bg-zinc-700"
+              className={`md:hidden inline-flex size-10 items-center justify-center rounded-full transition-colors duration-300 ${
+                showNavbarSurface
+                  ? "border border-white/10 bg-zinc-700"
+                  : "border border-white/20 bg-black/20"
+              }`}
             >
               {isOpen ? <X size={18} /> : <Menu size={18} />}
             </button>
@@ -85,7 +95,7 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.2 }}
-                className="mt-4 rounded-3xl border border-black/10  p-4 shadow-xl backdrop-blur-xl md:hidden"
+                className="mt-4 rounded-3xl border border-white/10 bg-black/80 p-4 shadow-xl backdrop-blur-xl md:hidden"
               >
                 <div className="flex flex-col gap-3">
                   {navLinks.map(({ link, name }) => (
