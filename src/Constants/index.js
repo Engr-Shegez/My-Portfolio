@@ -131,30 +131,30 @@ export const techStackIcons = [
 export const expCards = [
   {
     review:
-      "I leveraged creativity and technical expertise to enhance frontend performance, delivering faster and more efficient user experiences.",
+      "I led the development of a modern SaaS analytics dashboard using Next.js, delivering a highly responsive and data-driven platform for business insights. The system enhanced decision-making by providing clear data visualization, real-time metrics, and an intuitive user experience, showcasing his ability to build scalable and production-ready applications.",
     imgPath: "/images/metricly-logo.png",
-    logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
+    logoPath: "/images/new.png",
+    title: "Next.js Developer",
+
     date: "January 2024 - April 2024",
     responsibilities: [
-      "Built and maintained scalable user-facing features for a SaaS business analytics platform.",
-      "Led the UI/UX design, crafting intuitive dashboards and data visualization experiences.",
-      "Enhanced performance and scalability for handling complex, high-volume data workflows.",
+      "Designed and developed a scalable SaaS dashboard for business analytics using Next.js and modern UI frameworks.",
+      "Implemented interactive charts, KPI tracking, and data visualization tools to provide actionable insights.",
+      "Built optimized server-side and client-side rendering strategies for performance and SEO.",
+      "Developed secure authentication systems and role-based access control for multi-user environments.",
     ],
   },
   {
     review:
-      "Elijah led the development of a modern SaaS analytics dashboard using Next.js, delivering a highly responsive and data-driven platform for business insights. The system enhanced decision-making by providing clear data visualization, real-time metrics, and an intuitive user experience, showcasing his ability to build scalable and production-ready applications.",
+      "I leveraged creativity and technical expertise to enhance frontend performance, delivering faster and more efficient user experiences.",
     // imgPath: "/images/exp2.png",
     logoPath: "/images/logo2.png",
-    title: "Next.js Developer",
+    title: "Frontend Developer",
     date: "June 2020 - December 2023",
     responsibilities: [
-      "Designed and developed a scalable SaaS dashboard for business analytics using Next.js and modern UI frameworks.",
-      "Implemented interactive charts, KPI tracking, and data visualization tools to provide actionable insights.",
-      "Integrated RESTful APIs for real-time data synchronization and business reporting.",
-      "Built optimized server-side and client-side rendering strategies for performance and SEO.",
-      "Developed secure authentication systems and role-based access control for multi-user environments.",
+      "Built and maintained scalable user-facing features for a SaaS business analytics platform.",
+      "Led the UI/UX design, crafting intuitive dashboards and data visualization experiences.",
+      "Enhanced performance and scalability for handling complex, high-volume data workflows.",
     ],
   },
   {
