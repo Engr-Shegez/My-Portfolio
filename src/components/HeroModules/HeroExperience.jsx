@@ -28,12 +28,10 @@ export default function HeroExperience() {
       />
       <HeroLight />
       <group
-        scale={isMobile ? 0.7 : 1}
-        position={[0, -3.5, 0]}
+        scale={isMobile ? 0.7 : 1.1}
+        position={[0, -2.0, 0]}
         rotation={[0, -Math.PI / 4, 0]}
       >
-        {/* <Desktops /> */}
-        {/* <Room /> */}
         <Programmer />
       </group>
     </Canvas>

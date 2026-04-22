@@ -20,7 +20,7 @@ export default function ShowcaseSection() {
       <div className="w-full">
         <RevealOnScroll className="mb-10 max-w-2xl md:mb-14">
           <div className="hero-badge">
-            <p>Selected work</p>
+            <p>My works</p>
           </div>
           <h2 className="mt-4 max-w-3xl text-3xl font-semibold tracking-tight text-white md:text-5xl md:leading-[1.02]">
             Product work shaped around clarity, responsiveness, and real-world
@@ -126,7 +126,10 @@ export default function ShowcaseSection() {
             <RevealOnScroll className="project">
               <article className="surface-card rounded-[1.75rem] p-4 md:p-5">
                 <div className="image-wrapper bg-white/[0.03]">
-                  <img src="/images/e-commerce.png" alt="Nova Store ecommerce app" />
+                  <img
+                    src="/images/e-commerce.png"
+                    alt="Nova Store ecommerce app"
+                  />
                 </div>
                 <div className="space-y-5 px-1 pt-5">
                   <h3 className="text-xl font-semibold tracking-tight text-white md:text-2xl">

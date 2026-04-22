@@ -60,7 +60,7 @@ body {
 }
 
 ::selection {
-  background: rgba(139, 233, 253, 0.18);
+  background: rgba(0, 2, 3, 0.18);
   color: white;
 }
 
@@ -187,7 +187,7 @@ section {
   }
 
   .hero-badge {
-    @apply inline-flex w-fit max-w-full items-center rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-[0.72rem] font-medium uppercase tracking-[0.2em] text-slate-300 backdrop-blur-sm sm:px-4 sm:py-2;
+    @apply inline-flex mx-auto w-fit max-w-full items-center rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-[0.72rem] font-medium uppercase tracking-[0.2em] text-slate-300 backdrop-blur-sm sm:px-4 sm:py-2;
   }
 
   .section-badge {
@@ -203,10 +203,10 @@ section {
   }
 
   .hero-text {
-    @apply flex flex-col gap-4 text-[2.45rem] font-semibold tracking-tight text-white sm:text-[3.2rem] md:text-[4.65rem];
+    @apply flex flex-col gap-4 text-[2.2rem] font-semibold tracking-tight text-white sm:text-[3.2rem] md:text-[3.8rem];
 
     h1 {
-      @apply leading-[0.94];
+      @apply leading-[0.98];
     }
 
     h1:first-child {
@@ -226,7 +226,7 @@ section {
     @apply relative flex w-full justify-center xl:w-[46%] xl:justify-end;
   }
 
-.hero-3d-layout {
+  .hero-3d-layout {
     @apply relative h-[22rem] w-full max-w-[34rem] sm:h-[26rem] xl:h-[42rem] xl:max-w-[40rem];
   }
 
@@ -386,8 +386,12 @@ section {
   width: 26rem;
   height: 26rem;
   border-radius: 9999px;
-  background:
-    radial-gradient(circle, rgba(139, 233, 253, 0.18) 0%, rgba(139, 233, 253, 0.05) 32%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(139, 233, 253, 0.18) 0%,
+    rgba(139, 233, 253, 0.05) 32%,
+    transparent 70%
+  );
   filter: blur(32px);
 }
 
@@ -399,7 +403,11 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 2rem;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.015)
+    ),
     radial-gradient(circle at top, rgba(139, 233, 253, 0.16), transparent 52%),
     #0a1018;
   box-shadow: var(--shadow-md);
@@ -411,7 +419,11 @@ section {
   width: 15rem;
   height: 15rem;
   border-radius: 9999px;
-  background: radial-gradient(circle, rgba(139, 233, 253, 0.18), transparent 68%);
+  background: radial-gradient(
+    circle,
+    rgba(139, 233, 253, 0.18),
+    transparent 68%
+  );
   filter: blur(14px);
 }
 
@@ -421,7 +433,11 @@ section {
   border-radius: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.01)),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(255, 255, 255, 0.01)
+    ),
     linear-gradient(
       90deg,
       rgba(255, 255, 255, 0.03) 0%,
@@ -436,12 +452,16 @@ section {
   min-width: min(100%, 14ch);
   height: 1.1em;
   overflow: hidden;
+  align-items: center;
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  animation: wordSlider 21s infinite cubic-bezier(0.9, 0.01, 0.3, 0.99);
+  position: absolute;
+  inset: 0;
+  display: inline-flex;
+  align-items: center;
+  min-width: 100%;
+  white-space: nowrap;
 }
 
 .gradient-line {
@@ -558,7 +578,11 @@ section {
   width: 60%;
   height: 60%;
   border-radius: 9999px;
-  background: radial-gradient(circle, rgba(139, 233, 253, 0.12), transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(139, 233, 253, 0.12),
+    transparent 70%
+  );
   filter: blur(30px);
   opacity: 0.65;
 }
@@ -616,33 +640,6 @@ section {
   }
 }
 
-@keyframes wordSlider {
-  0% {
-    transform: translateY(0.5%);
-  }
-  12.5% {
-    transform: translateY(-12.5%);
-  }
-  25% {
-    transform: translateY(-25%);
-  }
-  37.5% {
-    transform: translateY(-37.5%);
-  }
-  50% {
-    transform: translateY(-50%);
-  }
-  62.5% {
-    transform: translateY(-62.5%);
-  }
-  75% {
-    transform: translateY(-75%);
-  }
-  87.5% {
-    transform: translateY(-87.5%);
-  }
-}
-
 @keyframes marquee {
   0% {
     transform: translateX(0);
@@ -654,10 +651,14 @@ section {
 
 @keyframes gridDrift {
   0% {
-    background-position: 0 0, 0 0;
+    background-position:
+      0 0,
+      0 0;
   }
   100% {
-    background-position: 40px 40px, 40px 40px;
+    background-position:
+      40px 40px,
+      40px 40px;
   }
 }
 

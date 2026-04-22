@@ -1,4 +1,5 @@
 import React, { Suspense, lazy, useEffect, useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import Typewriter from "../components/Typewriter";
 import { words } from "../Constants";
 import Button from "../components/Button";
@@ -11,6 +12,9 @@ const HeroExperience = lazy(
 
 export default function Hero() {
   const [showExperience, setShowExperience] = useState(false);
+  const [activeWordIndex, setActiveWordIndex] = useState(0);
+  const prefersReducedMotion = useReducedMotion();
+  const MotionSpan = motion.span;
 
   useEffect(() => {
     const viewportQuery = window.matchMedia("(min-width: 1024px)");
@@ -19,9 +23,7 @@ export default function Hero() {
     );
 
     const updateSceneVisibility = () => {
-      setShowExperience(
-        viewportQuery.matches && !reducedMotionQuery.matches,
-      );
+      setShowExperience(viewportQuery.matches && !reducedMotionQuery.matches);
     };
 
     updateSceneVisibility();
@@ -34,36 +36,65 @@ export default function Hero() {
     };
   }, []);
 
+  useEffect(() => {
+    if (words.length <= 1) {
+      return undefined;
+    }
+
+    const intervalId = window.setInterval(() => {
+      setActiveWordIndex((currentIndex) => (currentIndex + 1) % words.length);
+    }, 1400);
+
+    return () => window.clearInterval(intervalId);
+  }, []);
+
+  const activeWord = words[activeWordIndex];
+
   return (
     <section id="hero" className="relative overflow-hidden">
       <div aria-hidden="true" className="hero-accent" />
 
       <div className="hero-layout">
         <header className="hero-copy">
-          <RevealOnScroll className="flex max-w-2xl flex-col gap-6 md:gap-8" y={18}>
-            <div className="hero-badge">
+          <RevealOnScroll
+            className="flex max-w-2xl flex-col gap-6 md:gap-8"
+            y={18}
+          >
+            {/* <div className="hero-badge">
               <p>Frontend engineer crafting clean, scalable product interfaces</p>
-            </div>
+            </div> */}
 
             <div className="hero-text">
               <h1>
                 Building
                 <span className="slide">
-                  <span className="wrapper">
-                    {words.map((word) => (
-                      <span
-                        key={word.text}
-                        className="flex items-center gap-2.5 pb-2 md:gap-3"
-                      >
+                  <AnimatePresence mode="wait">
+                    <MotionSpan
+                      key={activeWord.text}
+                      initial={
+                        prefersReducedMotion
+                          ? { opacity: 1 }
+                          : { opacity: 0, y: 10 }
+                      }
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={
+                        prefersReducedMotion
+                          ? { opacity: 0 }
+                          : { opacity: 0, y: -10 }
+                      }
+                      transition={{ duration: prefersReducedMotion ? 0 : 0.2 }}
+                      className="wrapper"
+                    >
+                      <span className="flex items-center gap-2.5 md:gap-3">
                         <img
-                          src={word.imgPath}
-                          alt={word.text}
+                          src={activeWord.imgPath}
+                          alt={activeWord.text}
                           className="rounded-full bg-white/90 p-1.5 md:size-11 md:p-2"
                         />
-                        <span>{word.text}</span>
+                        <span>{activeWord.text}</span>
                       </span>
-                    ))}
-                  </span>
+                    </MotionSpan>
+                  </AnimatePresence>
                 </span>
               </h1>
               <h1>
@@ -74,7 +105,9 @@ export default function Hero() {
 
             <p className="hero-subtext">
               <Typewriter
-                text={"Hi, I'm Elijah, a frontend developer focused on thoughtful product UI."}
+                text={
+                  "Hi, I'm Elijah, a frontend developer focused on thoughtful product UI."
+                }
                 speed={70}
               />
             </p>
