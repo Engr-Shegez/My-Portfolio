@@ -1,21 +1,25 @@
 import React from "react";
 import { abilities } from "../Constants";
+import RevealOnScroll from "../components/RevealOnScroll";
 
 export default function FeatureCards() {
   return (
     <div className="w-full padding-x-lg">
       <div className="mx-auto grid-3-cols">
         {abilities.map(({ imgPath, title, desc }) => (
-          <div
-            key={title}
-            className="card-border rounded-xl p-8 flex flex-col gap-4"
-          >
-            <div className="size-14 flex items-center justify-center rounded-full">
-              <img src={imgPath} alt={title} />
+          <RevealOnScroll key={title}>
+            <div className="surface-card flex h-full flex-col gap-4 rounded-[1.5rem] p-6 md:p-8">
+              <div className="flex size-12 items-center justify-center rounded-full border border-white/8 bg-white/[0.04] md:size-14">
+                <img src={imgPath} alt={title} className="size-6 md:size-7" />
+              </div>
+              <h3 className="text-xl font-semibold tracking-tight text-white md:text-2xl">
+                {title}
+              </h3>
+              <p className="text-sm leading-7 text-slate-300 md:text-base">
+                {desc}
+              </p>
             </div>
-            <h3 className="text-white text-2xl font-semibold mt-2">{title}</h3>
-            <p className="text-white-50 text-lg">{desc}</p>
-          </div>
+          </RevealOnScroll>
         ))}
       </div>
     </div>

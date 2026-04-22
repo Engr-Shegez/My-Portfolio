@@ -1,9 +1,9 @@
 export const words = [
   { text: "Interfaces", imgPath: "/images/ideas.svg" },
   { text: "Products", imgPath: "/images/check.svg" },
-  { text: "UI's", imgPath: "/images/arrow-up-green.svg" },
+  { text: "UIs", imgPath: "/images/arrow-up-green.svg" },
   { text: "Websites", imgPath: "/images/concepts.svg" },
-  { text: "designs", imgPath: "/images/designs.svg" },
+  { text: "Designs", imgPath: "/images/designs.svg" },
   { text: "Pages", imgPath: "/images/code.svg" },
   { text: "Components", imgPath: "/images/users.svg" },
   { text: "Layouts", imgPath: "/images/blue-check.svg" },
@@ -12,7 +12,7 @@ export const words = [
 export const counterItems = [
   { value: 3, suffix: "+", label: "Years of Experience" },
   { value: 20, suffix: "+", label: "Personal Project Built" },
-  { value: 5, suffix: "+", label: "Full Stack Web-App" },
+  { value: 3, suffix: "+", label: "Full Stack Web-App" },
   { value: 90, suffix: "%", label: "Projects successfully deployed" },
 ];
 
@@ -21,17 +21,14 @@ export const navLinks = [
     name: "Work",
     link: "#work",
   },
-
   {
     name: "Experience",
     link: "#experience",
   },
-
   {
     name: "Skills",
     link: "#skills",
   },
-
   {
     name: "Contact",
     link: "#contact",
@@ -56,19 +53,17 @@ export const abilities = [
   {
     imgPath: "/images/seo.png",
     title: "Quality Focus",
-    desc: "Consistently delivering high-quality results while maintaining sustained focus and attention control",
+    desc: "Consistently delivering high-quality results while maintaining sustained focus and attention control.",
   },
-
   {
     imgPath: "/images/chat.png",
     title: "Reliable Communication",
     desc: "Maintaining open communication throughout to build trust and execute with precision.",
   },
-
   {
     imgPath: "/images/time.png",
     title: "On-Time Delivery",
-    desc: "Ensuring projects are delivered on time, with exceptional quality and efficiency",
+    desc: "Ensuring projects are delivered on time with exceptional quality and efficiency.",
   },
 ];
 
@@ -131,11 +126,10 @@ export const techStackIcons = [
 export const expCards = [
   {
     review:
-      "I led the development of a modern SaaS analytics dashboard using Next.js, delivering a highly responsive and data-driven platform for business insights. The system enhanced decision-making by providing clear data visualization, real-time metrics, and an intuitive user experience, showcasing his ability to build scalable and production-ready applications.",
+      "I led the development of a modern SaaS analytics dashboard using Next.js, delivering a highly responsive and data-driven platform for business insights. The system enhanced decision-making by providing clear data visualization, real-time metrics, and an intuitive user experience, showcasing the ability to build scalable and production-ready applications.",
     imgPath: "/images/metricly-logo.png",
     logoPath: "/images/new.png",
     title: "Next.js Developer",
-
     date: "January 2024 - April 2024",
     responsibilities: [
       "Designed and developed a scalable SaaS dashboard for business analytics using Next.js and modern UI frameworks.",
@@ -147,7 +141,6 @@ export const expCards = [
   {
     review:
       "I leveraged creativity and technical expertise to enhance frontend performance, delivering faster and more efficient user experiences.",
-    // imgPath: "/images/exp2.png",
     logoPath: "/images/logo2.png",
     title: "Frontend Developer",
     date: "June 2020 - December 2023",
@@ -159,7 +152,7 @@ export const expCards = [
   },
   {
     review:
-      "Elijah designed and developed a full-stack e-commerce application, demonstrating strong technical expertise and a customer-centric approach. The final product provided a smooth, intuitive shopping experience and highlighted Elijah's ability to handle both frontend and backend development with efficiency and creativity",
+      "Elijah designed and developed a full-stack e-commerce application, demonstrating strong technical expertise and a customer-centric approach. The final product provided a smooth, intuitive shopping experience and highlighted Elijah's ability to handle both frontend and backend development with efficiency and creativity.",
     imgPath: "/images/exp4.png",
     logoPath: "/images/logo4.png",
     title: "Full Stack Developer",
@@ -167,9 +160,9 @@ export const expCards = [
     responsibilities: [
       "Designed and built a full-stack e-commerce application using React, Node.js, Express, and MongoDB.",
       "Implemented core features such as product catalog, shopping cart, checkout, and order management.",
-      "Integrated secure user authentication, payment processing (e.g., Stripe), and role-based access for customers and admins.",
-      "Optimized UI/UX for responsiveness and performance across devices.",
-      "Led end-to-end development from database architecture to frontend deployment,ensuring scalability and maintainability.",
+      "Integrated secure user authentication, payment processing such as Stripe, and role-based access for customers and admins.",
+      "Optimized UI and UX for responsiveness and performance across devices.",
+      "Led end-to-end development from database architecture to frontend deployment, ensuring scalability and maintainability.",
     ],
   },
 ];
@@ -194,35 +187,35 @@ export const testimonials = [
     name: "Sarah Chen",
     mentions: "Frontend Mentor & Coding Bootcamp Instructor",
     review:
-      "I can’t say enough good things about Elijah. He has a great eye for clean, responsive design and picks up New concerpts quickly",
+      "I can't say enough good things about Elijah. He has a great eye for clean, responsive design and picks up new concepts quickly.",
     imgPath: "/images/client1.png",
   },
   {
     name: "David Christopher",
     mentions: "Fellow Developer (Grouped Project)",
     review:
-      "Working with Elijah was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
+      "Working with Elijah was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web development project.",
     imgPath: "/images/client3.png",
   },
   {
     name: "Oluwatobi Adebayo",
-    mentions: "Frontend Mentor & Coding Bootcamp instructor",
+    mentions: "Frontend Mentor & Coding Bootcamp Instructor",
     review:
-      "Elijah's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Elijah is the ideal partner.",
+      "Elijah's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and strengthen your brand, Elijah is the ideal partner.",
     imgPath: "/images/client2.png",
   },
   {
     name: "Ngozi Eze",
     mentions: "Bootcamp Teaching Assistant",
     review:
-      "He always writes readable, well documented code and solves bugs efficiently. Collaborating with him on our Full-stack project was smooth and enjoyable",
+      "He always writes readable, well-documented code and solves bugs efficiently. Collaborating with him on our full-stack project was smooth and enjoyable.",
     imgPath: "/images/client5.png",
   },
   {
     name: "Tolani Adeyemi",
-    mentions: "Collegue & Group Project Partner",
+    mentions: "Colleague & Group Project Partner",
     review:
-      "Elijah’s expertise in web development is truly impressive. He is a quick learner who isn't afraid to dive into new technologies like Next.js and Tailwind.",
+      "Elijah's expertise in web development is truly impressive. He is a quick learner who isn't afraid to dive into new technologies like Next.js and Tailwind.",
     imgPath: "/images/client4.png",
   },
   {

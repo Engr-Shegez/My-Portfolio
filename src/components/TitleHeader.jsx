@@ -2,13 +2,11 @@ import React from "react";
 
 export default function TitleHeader({ title, sub }) {
   return (
-    <div className="flex flex-col items-center gap-5">
-      <div className="hero-badge">
+    <div className="section-heading">
+      <div className="hero-badge section-badge">
         <p>{sub}</p>
       </div>
-      <div className="font-semibold md:text-5xl text-3xl text-center">
-        {title}
-      </div>
+      <h2 className="section-title">{title}</h2>
     </div>
   );
 }

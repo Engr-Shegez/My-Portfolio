@@ -1,177 +1,170 @@
-import React, { useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
+import React from "react";
+import RevealOnScroll from "../components/RevealOnScroll";
 
-gsap.registerPlugin(ScrollTrigger);
+const projectActions = [
+  {
+    label: "View Code",
+    icon: "/images/github.png",
+    className: "size-5",
+  },
+  {
+    label: "Live Demo",
+    icon: "/images/concepts.svg",
+    className: "size-[1.125rem]",
+  },
+];
 
 export default function ShowcaseSection() {
-  const sectionRef = useRef(null);
-  const binglebeamRef = useRef(null);
-  const quizprojectRef = useRef(null);
-  const project2Ref = useRef(null);
-
-  useGSAP(() => {
-    const projects = [
-      binglebeamRef.current,
-      project2Ref.current,
-      quizprojectRef.current,
-    ];
-
-    projects.forEach((card, index) => {
-      gsap.fromTo(
-        card,
-        {
-          y: 50,
-          opacity: 0,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          delay: 0.3 * (index + 1),
-          scrollTrigger: {
-            trigger: card,
-            start: "top bottom-=100",
-          },
-        },
-      );
-    });
-    gsap.fromTo(
-      sectionRef.current,
-      { opacity: 0 },
-      { opacity: 1, duration: 1.5 },
-    );
-  }, []);
-
   return (
-    <section id="work" ref={sectionRef} className="app-showcase">
+    <section id="work" className="app-showcase">
       <div className="w-full">
-        <div className="showcaselayout">
-          {/* LEFT SIDE */}
-          <div className="first-project-wrapper" ref={binglebeamRef}>
-            <div className="imagewrapper">
-              <img src="/images/aiworkspace.png" alt="Bingle-Beam" />
-            </div>
-            <div className="text-content">
-              <h2>Thredline — The AI-Powered Workspace</h2>
-              <p className="text-white-50 md:text-xl">
-                A modern AI-powered workspace designed to centralize intelligent
-                workflows into a single, seamless interface. Thredline enables
-                users to interact with AI, manage conversations, and streamline
-                productivity through a clean, responsive, and scalable system
-                architecture.
-              </p>
-              <div className="flex gap-5">
-                <a
-                  href="https://github.com/Engr-Shegez/Ai-workspace.git"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="px-5 py-2 rounded-lg bg-white text-black-100 hover:bg-black-50 transition-colors duration-300 hover:text-white w-39 h-10 font-semibold flex justify-center gap-1">
-                    <img
-                      src="/images/github.png"
-                      alt="image"
-                      className="size-7"
-                    />
-                    <span>View Code</span>
-                  </div>
-                </a>
-                <a
-                  href="https://ai-workspace-theta.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="px-5 py-2 rounded-lg bg-white text-black-100 hover:bg-black-50 transition-colors duration-300 hover:text-white w-39 h-10 font-semibold flex justify-center gap-1">
-                    <img
-                      src="/images/concepts.svg"
-                      alt="image"
-                      className="size-5 pt-1 "
-                    />
-                    <span>Live Demo</span>
-                  </div>
-                </a>
-              </div>
-            </div>
+        <RevealOnScroll className="mb-10 max-w-2xl md:mb-14">
+          <div className="hero-badge">
+            <p>Selected work</p>
           </div>
+          <h2 className="mt-4 max-w-3xl text-3xl font-semibold tracking-tight text-white md:text-5xl md:leading-[1.02]">
+            Product work shaped around clarity, responsiveness, and real-world
+            usability.
+          </h2>
+        </RevealOnScroll>
 
-          {/* RIGHT SIDE */}
-          <div className="project-list-wrapper overflow-hidden">
-            <div className="project " ref={quizprojectRef}>
-              <div className="imagewrapper bg-[#fffefdb] relative">
-                <img src="/images/download.png" alt="React DashBoard" />
+        <div className="showcaselayout">
+          <RevealOnScroll className="first-project-wrapper">
+            <article className="surface-card h-full rounded-[2rem] p-4 md:p-6">
+              <div className="image-wrapper">
+                <img src="/images/aiworkspace.png" alt="Thredline workspace" />
               </div>
-              <h2 className="pl-2 pb-5">A Travel Agency - React Dashboard</h2>
-              <div className="flex gap-5 pl-2">
-                <a
-                  href="https://github.com/Engr-Shegez/Travel-agency-admin-dashboard.git"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="px-5 py-2 rounded-lg bg-white text-black-100 hover:bg-black-50 transition-colors duration-300 hover:text-white w-39 h-10 font-semibold flex justify-center gap-1">
+              <div className="text-content">
+                <h2>Thredline, the AI-powered workspace</h2>
+                <p className="text-slate-300 md:text-lg">
+                  A modern AI workspace designed to centralize conversations,
+                  context, and task flow into one responsive interface. The
+                  product balances clear information hierarchy with a scalable
+                  frontend system built for speed and day-to-day usability.
+                </p>
+                <div className="action-row">
+                  <a
+                    href="https://github.com/Engr-Shegez/Ai-workspace.git"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="action-chip"
+                  >
                     <img
-                      src="/images/github.png"
-                      alt="image"
-                      className="size-7"
+                      src={projectActions[0].icon}
+                      alt=""
+                      aria-hidden="true"
+                      className={projectActions[0].className}
                     />
-                    <span>View Code</span>
-                  </div>
-                </a>
-                <a
-                  href="https://travel-agency-admin-dashboard.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="px-5 py-2 rounded-lg bg-white text-black-100 hover:bg-black-50 transition-colors duration-300 hover:text-white w-39 h-10 font-semibold flex justify-center gap-1">
+                    <span>{projectActions[0].label}</span>
+                  </a>
+                  <a
+                    href="https://ai-workspace-theta.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="action-chip action-chip--primary"
+                  >
                     <img
-                      src="/images/concepts.svg"
-                      alt="image"
-                      className="size-5 pt-1 "
+                      src={projectActions[1].icon}
+                      alt=""
+                      aria-hidden="true"
+                      className={projectActions[1].className}
                     />
-                    <span>Live Demo</span>
-                  </div>
-                </a>
+                    <span>{projectActions[1].label}</span>
+                  </a>
+                </div>
               </div>
-            </div>
+            </article>
+          </RevealOnScroll>
 
-            <div className="project" ref={project2Ref}>
-              <div className="imagewrapper bg-[#fffe7db]">
-                <img src="/images/e-commerce.png" alt="Nova Store" />
-              </div>
-              <h2 className="pl-2 pb-5">
-                Nova Store – E-Commerce App with Stripe Payments
-              </h2>
-              <div className="flex gap-5 pl-2">
-                <a
-                  href="https://github.com/Engr-Shegez/Nova-store.git"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="px-5 py-2 rounded-lg bg-white text-black-100 hover:bg-black-50 transition-colors duration-300 hover:text-white w-39 font-semibold flex justify-center gap-1 h-10">
-                    <img
-                      src="/images/github.png"
-                      alt="image"
-                      className="size-7"
-                    />
-                    <span>View Code</span>
+          <div className="project-list-wrapper">
+            <RevealOnScroll className="project">
+              <article className="surface-card rounded-[1.75rem] p-4 md:p-5">
+                <div className="image-wrapper bg-white/[0.03]">
+                  <img
+                    src="/images/download.png"
+                    alt="Travel agency React dashboard"
+                  />
+                </div>
+                <div className="space-y-5 px-1 pt-5">
+                  <h3 className="text-xl font-semibold tracking-tight text-white md:text-2xl">
+                    Travel agency React dashboard
+                  </h3>
+                  <div className="action-row">
+                    <a
+                      href="https://github.com/Engr-Shegez/Travel-agency-admin-dashboard.git"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="action-chip"
+                    >
+                      <img
+                        src={projectActions[0].icon}
+                        alt=""
+                        aria-hidden="true"
+                        className={projectActions[0].className}
+                      />
+                      <span>{projectActions[0].label}</span>
+                    </a>
+                    <a
+                      href="https://travel-agency-admin-dashboard.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="action-chip action-chip--primary"
+                    >
+                      <img
+                        src={projectActions[1].icon}
+                        alt=""
+                        aria-hidden="true"
+                        className={projectActions[1].className}
+                      />
+                      <span>{projectActions[1].label}</span>
+                    </a>
                   </div>
-                </a>
-                <a
-                  href="https://novagadget-store.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="px-5 py-2 rounded-lg bg-white text-black-100 hover:bg-black-50 transition-colors duration-300 hover:text-white w-39 font-semibold flex justify-center gap-1 h-10">
-                    <img
-                      src="/images/concepts.svg"
-                      alt="image"
-                      className="size-5 pt-1 "
-                    />
-                    <span>Live Demo</span>
+                </div>
+              </article>
+            </RevealOnScroll>
+
+            <RevealOnScroll className="project">
+              <article className="surface-card rounded-[1.75rem] p-4 md:p-5">
+                <div className="image-wrapper bg-white/[0.03]">
+                  <img src="/images/e-commerce.png" alt="Nova Store ecommerce app" />
+                </div>
+                <div className="space-y-5 px-1 pt-5">
+                  <h3 className="text-xl font-semibold tracking-tight text-white md:text-2xl">
+                    Nova Store ecommerce with Stripe payments
+                  </h3>
+                  <div className="action-row">
+                    <a
+                      href="https://github.com/Engr-Shegez/Nova-store.git"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="action-chip"
+                    >
+                      <img
+                        src={projectActions[0].icon}
+                        alt=""
+                        aria-hidden="true"
+                        className={projectActions[0].className}
+                      />
+                      <span>{projectActions[0].label}</span>
+                    </a>
+                    <a
+                      href="https://novagadget-store.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="action-chip action-chip--primary"
+                    >
+                      <img
+                        src={projectActions[1].icon}
+                        alt=""
+                        aria-hidden="true"
+                        className={projectActions[1].className}
+                      />
+                      <span>{projectActions[1].label}</span>
+                    </a>
                   </div>
-                </a>
-              </div>
-            </div>
+                </div>
+              </article>
+            </RevealOnScroll>
           </div>
         </div>
       </div>

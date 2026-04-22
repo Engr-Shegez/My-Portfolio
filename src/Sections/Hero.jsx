@@ -1,44 +1,50 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useEffect, useState } from "react";
 import Typewriter from "../components/Typewriter";
 import { words } from "../Constants";
 import Button from "../components/Button";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import AnimatedCounter from "../components/AnimatedCounter";
+import RevealOnScroll from "../components/RevealOnScroll";
 
 const HeroExperience = lazy(
   () => import("../components/HeroModules/HeroExperience"),
 );
 
 export default function Hero() {
-  useGSAP(() => {
-    gsap.fromTo(
-      ".hero-text h1",
-      {
-        y: 40,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        stagger: 0.2,
-        duration: 1.5,
-        ease: "power2.inOut",
-      },
-      {},
+  const [showExperience, setShowExperience] = useState(false);
+
+  useEffect(() => {
+    const viewportQuery = window.matchMedia("(min-width: 1024px)");
+    const reducedMotionQuery = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
     );
-  });
+
+    const updateSceneVisibility = () => {
+      setShowExperience(
+        viewportQuery.matches && !reducedMotionQuery.matches,
+      );
+    };
+
+    updateSceneVisibility();
+    viewportQuery.addEventListener("change", updateSceneVisibility);
+    reducedMotionQuery.addEventListener("change", updateSceneVisibility);
+
+    return () => {
+      viewportQuery.removeEventListener("change", updateSceneVisibility);
+      reducedMotionQuery.removeEventListener("change", updateSceneVisibility);
+    };
+  }, []);
 
   return (
     <section id="hero" className="relative overflow-hidden">
-      <div className="absolute top-0 left-0 z-10">
-        <img src="/images/hexbg.jpg" alt="background" />
-      </div>
+      <div aria-hidden="true" className="hero-accent" />
 
       <div className="hero-layout">
-        {/* left; hero content */}
-        <header className="flex flex-col justify-center md:w-full w-screen pt-18 md:pt-20 lg:pt-0 md:px-20 px-5">
-          <div className="flex flex-col gap-6">
+        <header className="hero-copy">
+          <RevealOnScroll className="flex max-w-2xl flex-col gap-6 md:gap-8" y={18}>
+            <div className="hero-badge">
+              <p>Frontend engineer crafting clean, scalable product interfaces</p>
+            </div>
+
             <div className="hero-text">
               <h1>
                 Building
@@ -47,12 +53,12 @@ export default function Hero() {
                     {words.map((word) => (
                       <span
                         key={word.text}
-                        className="flex items-center md:gap-3 gap-1 pb-2"
+                        className="flex items-center gap-2.5 pb-2 md:gap-3"
                       >
                         <img
                           src={word.imgPath}
                           alt={word.text}
-                          className="xl:size-12 md:size-7 md:p-2 p-1 rounded-full bg-white-50"
+                          className="rounded-full bg-white/90 p-1.5 md:size-11 md:p-2"
                         />
                         <span>{word.text}</span>
                       </span>
@@ -61,34 +67,42 @@ export default function Hero() {
                 </span>
               </h1>
               <h1>
-                where functionality meets <br /> form and clean code <br />
-                seamlessly embodies <br />
-                creative vision.
+                where clarity, performance, and visual polish work together from
+                the first interaction.
               </h1>
             </div>
-            <p className="text-white-50 md:text-xl relative z-10 font-bold pointer-events-none">
+
+            <p className="hero-subtext">
               <Typewriter
-                text={"Hi, I'm Elijah, a Frontend Developer."}
+                text={"Hi, I'm Elijah, a frontend developer focused on thoughtful product UI."}
                 speed={70}
               />
             </p>
+
             <Button
-              className="md:w-100 md:h-10 w-60 h-12"
+              className="h-12 w-full sm:h-[3.25rem] sm:w-[17rem]"
               id="button"
               text="Explore My Craft"
             />
-          </div>
+          </RevealOnScroll>
         </header>
-        {/* right: 3d model */}
 
-        <figure>
-          <div className="hero-3d-layout ">
-            <Suspense fallback={<div className="h-full w-full" />}>
-              <HeroExperience />
-            </Suspense>
+        <figure className="hero-visual-shell">
+          <div className="hero-3d-layout">
+            {showExperience ? (
+              <Suspense fallback={<div className="hero-visual-fallback" />}>
+                <HeroExperience />
+              </Suspense>
+            ) : (
+              <div className="hero-visual-fallback" aria-hidden="true">
+                <div className="hero-visual-fallback__orb" />
+                <div className="hero-visual-fallback__panel" />
+              </div>
+            )}
           </div>
         </figure>
       </div>
+
       <AnimatedCounter />
     </section>
   );

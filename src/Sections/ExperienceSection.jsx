@@ -1,105 +1,70 @@
-import React, { useRef } from "react";
+import React from "react";
 import TitleHeader from "../components/TitleHeader";
 import { expCards } from "../Constants";
 import GlowCard from "../components/GlowCard";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import RevealOnScroll from "../components/RevealOnScroll";
 
 export default function ExperienceSection() {
-  useGSAP(() => {
-    gsap.utils.toArray(".timeline-card").forEach((card) => {
-      gsap.from(card, {
-        xPercent: -100,
-        opacity: 0,
-        transformOrigin: "left left",
-        duration: 1,
-        ease: "Power2.inOut",
-        scrollTrigger: {
-          trigger: card,
-          start: "top 80%",
-        },
-      });
-    });
-
-    gsap.to(".timeline", {
-      transformOrigin: "bottom bottom",
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: ".timeline",
-        start: "top center",
-        end: "70% center",
-
-        onUpdate: (self) => {
-          gsap.to(".timeline", {
-            scaleY: 1 - self.progress,
-          });
-        },
-      },
-    });
-
-    gsap.utils.toArray(".timeline-expText").forEach((text) => {
-      gsap.from(text, {
-        xPercent: 0,
-        opacity: 0,
-        duration: 1,
-        ease: "Power2.inOut",
-        scrollTrigger: {
-          trigger: text,
-          start: "top 60%",
-        },
-      });
-    });
-  }, []);
   return (
     <section
       id="experience"
-      className="w-full md:mt-40 mt-20 section-padding xl:px-0"
+      className="w-full section-padding xl:px-0"
     >
-      <div className="w-full h-full md:px-20 px-5">
-        <TitleHeader title="My Journey" sub="👜My Career Overview" />
+      <div className="w-full h-full px-5 md:px-20">
+        <RevealOnScroll>
+          <TitleHeader title="My Journey" sub="👐 My Career Overview" />
+        </RevealOnScroll>
 
-        <div className="mt-32 relative">
-          <div className="relative z-10 xl:space-y-32 space-y-10">
-            {expCards.map((card, index) => (
+        <div className="relative mt-16 md:mt-24">
+          <div className="relative z-10 space-y-12 xl:space-y-20">
+            {expCards.map((card) => (
               <div key={card.title} className="exp-card-wrapper">
-                <div className="xl:w-2/6">
-                  <GlowCard card={card} index={index}>
-                    <div>
-                      <img src={card.imgPath} alt={card.title} />
-                    </div>
+                <RevealOnScroll className="xl:w-2/6">
+                  <GlowCard card={card}>
+                    {card.imgPath ? (
+                      <div className="overflow-hidden rounded-[1rem] border border-white/10 bg-white/[0.03]">
+                        <img src={card.imgPath} alt={card.title} className="w-full object-cover" />
+                      </div>
+                    ) : null}
                   </GlowCard>
-                </div>
-                <div className="xl:w-4/6">
-                  <div className="flex items-start">
-                    <div className="timeline-wrapper">
+                </RevealOnScroll>
+
+                <RevealOnScroll className="xl:w-4/6" y={18}>
+                  <div className="experience-panel">
+                    <div className="timeline-wrapper" aria-hidden="true">
                       <div className="timeline" />
-                      <div className="gradient-line w-1 h-full" />
+                      <div className="gradient-line w-px h-full" />
                     </div>
 
-                    <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20">
+                    <div className="expText flex gap-4 sm:gap-6 md:gap-8">
                       <div className="timeline-logo">
-                        <img src={card.logoPath} alt="logo" />
+                        <img src={card.logoPath} alt="" aria-hidden="true" />
                       </div>
-                      <div>
-                        <h1 className="font-semibold text-3xl">{card.title}</h1>
-                        <p className="my-5 text-white-50">🗓️{card.date}</p>
-                        <p className="text-[#839cb5] italic">
+                      <div className="space-y-4">
+                        <div className="space-y-3">
+                          <p className="text-sm font-medium uppercase tracking-[0.22em] text-cyan-200/75">
+                            {card.date}
+                          </p>
+                          <h3 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+                            {card.title}
+                          </h3>
+                        </div>
+
+                        <p className="text-sm uppercase tracking-[0.18em] text-slate-400">
                           Responsibilities
                         </p>
-                        <ul className="list-disc ms-5 mt-5 flex flex-col gap-5 text-white-50">
-                          {card.responsibilities.map((responsibilities) => (
-                            <li key={responsibilities} className="text-lg">
-                              {responsibilities}
+
+                        <ul className="space-y-3 text-sm leading-7 text-slate-300 md:text-base">
+                          {card.responsibilities.map((responsibility) => (
+                            <li key={responsibility} className="experience-bullet">
+                              {responsibility}
                             </li>
                           ))}
                         </ul>
                       </div>
                     </div>
                   </div>
-                </div>
+                </RevealOnScroll>
               </div>
             ))}
           </div>

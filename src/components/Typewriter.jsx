@@ -5,6 +5,16 @@ export default function Typewriter({ text, speed = 60, className = "" }) {
   const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
+    const prefersReducedMotion =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (prefersReducedMotion) {
+      setDisplayed(text);
+      setShowCursor(false);
+      return undefined;
+    }
+
     let i = 0;
     let timeoutId;
     setDisplayed("");
