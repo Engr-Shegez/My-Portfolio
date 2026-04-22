@@ -24,10 +24,19 @@ export default function RevealOnScroll({
             ? { opacity: 1, y: 0 }
             : { opacity: 0, y }
       }
-      transition={{
-        duration: prefersReducedMotion ? 0 : 0.26,
-        ease: [0.22, 1, 0.36, 1],
-      }}
+      transition={
+        prefersReducedMotion
+          ? { duration: 0 }
+          : isInView
+            ? {
+                duration: 0.24,
+                ease: [0.22, 1, 0.36, 1],
+              }
+            : {
+                duration: 0.38,
+                ease: [0.16, 1, 0.3, 1],
+              }
+      }
       className={className}
     >
       {children}
