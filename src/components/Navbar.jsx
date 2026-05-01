@@ -6,7 +6,9 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState(navLinks[0]?.link ?? "#work");
+  const [activeSection, setActiveSection] = useState(
+    navLinks[0]?.link ?? "#work",
+  );
   const prefersReducedMotion = useReducedMotion();
   const MotionDiv = motion.div;
   const showNavbarSurface = scrolled || isOpen;
@@ -62,7 +64,7 @@ export default function Navbar() {
   }, [isOpen]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-4">
+    <header className="fixed inset-x-0 top-0 z-50 px-3 pt-1 sm:px-4">
       <div className="mx-auto max-w-7xl">
         <div
           className={`rounded-[1.65rem] border transition-all duration-200 ${
@@ -77,8 +79,13 @@ export default function Navbar() {
               href="#hero"
               onClick={() => setIsOpen(false)}
             >
-              <span className="inline-flex size-2 rounded-full bg-cyan-300 shadow-[0_0_14px_rgba(103,232,249,0.45)]" />
-              Elijah
+              {/* <span className="inline-flex size-2 rounded-full bg-cyan-300 shadow-[0_0_14px_rgba(103,232,249,0.45)]" />
+              Elijah */}
+              <img
+                src="/images/my-logo.jpg"
+                alt="name"
+                className="size-14 object-cover md:size-16"
+              />
             </a>
 
             <nav className="hidden items-center gap-1 rounded-full border border-white/6 bg-white/[0.03] p-1 md:flex">
@@ -126,7 +133,9 @@ export default function Navbar() {
               <button
                 type="button"
                 aria-expanded={isOpen}
-                aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+                aria-label={
+                  isOpen ? "Close navigation menu" : "Open navigation menu"
+                }
                 onClick={() => setIsOpen((prev) => !prev)}
                 className={`inline-flex size-11 items-center justify-center rounded-full border transition-all duration-200 ${
                   showNavbarSurface
@@ -143,8 +152,12 @@ export default function Navbar() {
             {isOpen && (
               <MotionDiv
                 initial={prefersReducedMotion ? false : { opacity: 0, y: -12 }}
-                animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
-                exit={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: -12 }}
+                animate={
+                  prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }
+                }
+                exit={
+                  prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: -12 }
+                }
                 transition={{ duration: prefersReducedMotion ? 0 : 0.18 }}
                 className="border-t border-white/8 px-4 pb-4 pt-3 md:hidden"
               >

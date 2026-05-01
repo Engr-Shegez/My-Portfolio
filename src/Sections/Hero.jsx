@@ -5,6 +5,7 @@ import { words } from "../Constants";
 import Button from "../components/Button";
 import AnimatedCounter from "../components/AnimatedCounter";
 import RevealOnScroll from "../components/RevealOnScroll";
+import MobileHeroVisual from "../components/HeroModules/MobileHeroVisual";
 
 const HeroExperience = lazy(
   () => import("../components/HeroModules/HeroExperience"),
@@ -85,11 +86,11 @@ export default function Hero() {
                       transition={{ duration: prefersReducedMotion ? 0 : 0.2 }}
                       className="wrapper"
                     >
-                      <span className="flex items-center gap-2.5 md:gap-3">
+                      <span className="flex items-center ">
                         <img
                           src={activeWord.imgPath}
                           alt={activeWord.text}
-                          className="rounded-full bg-white/90 p-1.5 md:size-11 md:p-2"
+                          className="rounded-full bg-white/90 p-1.5 md:size-9 md:p-2"
                         />
                         <span>{activeWord.text}</span>
                       </span>
@@ -113,7 +114,7 @@ export default function Hero() {
             </p>
 
             <Button
-              className="h-12 w-full sm:h-[3.25rem] sm:w-[17rem]"
+              className="h-12 -mt-2 w-full sm:h-[3.25rem] sm:w-[17rem]"
               id="button"
               text="Explore My Craft"
             />
@@ -123,14 +124,11 @@ export default function Hero() {
         <figure className="hero-visual-shell">
           <div className="hero-3d-layout">
             {showExperience ? (
-              <Suspense fallback={<div className="hero-visual-fallback" />}>
+              <Suspense fallback={<MobileHeroVisual />}>
                 <HeroExperience />
               </Suspense>
             ) : (
-              <div className="hero-visual-fallback" aria-hidden="true">
-                <div className="hero-visual-fallback__orb" />
-                <div className="hero-visual-fallback__panel" />
-              </div>
+              <MobileHeroVisual />
             )}
           </div>
         </figure>
