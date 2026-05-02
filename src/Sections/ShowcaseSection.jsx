@@ -78,17 +78,22 @@ export default function ShowcaseSection() {
               <article className="surface-card mt-6 rounded-[1.75rem] p-4 md:p-5">
                 <div className="image-wrapper bg-white/[0.03]">
                   <img
-                    src="/images/e-commerce.png"
+                    src="/images/metric.png"
                     alt="Nova Store ecommerce app"
                   />
                 </div>
                 <div className="space-y-5 px-1 pt-5">
                   <h3 className="text-xl font-semibold tracking-tight text-white md:text-2xl">
-                    Nova Store ecommerce with Stripe payments
+                    Team Productivity SaaS Platform
                   </h3>
+                  <p className="text-slate-300 md:text-lg">
+                    A responsive SaaS tool that helps teams organize tasks,
+                    monitor progress, and make faster decisions with intuitive
+                    data visualization and workflow management features.
+                  </p>
                   <div className="action-row">
                     <a
-                      href="https://github.com/Engr-Shegez/Nova-store.git"
+                      href="https://github.com/Engr-Shegez/metricly.git"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="action-chip"

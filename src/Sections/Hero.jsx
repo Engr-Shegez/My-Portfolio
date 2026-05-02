@@ -53,7 +53,7 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative overflow-hidden">
-      <div aria-hidden="true" className="hero-accent" />
+      {/* <div aria-hidden="true" className="hero-accent" /> */}
 
       <div className="hero-layout">
         <header className="hero-copy">
