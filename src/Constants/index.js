@@ -137,17 +137,40 @@ export const expCards = [
       "Built optimized server-side and client-side rendering strategies for performance and SEO.",
       "Developed secure authentication systems and role-based access control for multi-user environments.",
     ],
+    actions: [
+      {
+        label: "View Demo",
+        href: "https://novagadget-store.vercel.app/",
+        variant: "primary",
+      },
+      {
+        label: "View Code",
+        href: "https://github.com/Engr-Shegez/metricly.git",
+      },
+    ],
   },
   {
     review:
-      "I leveraged creativity and technical expertise to enhance frontend performance, delivering faster and more efficient user experiences.",
+      "I built a responsive restaurant platform for a Nigerian food brand, combining polished visual design with practical ordering and reservation flows.",
     logoPath: "/images/logo2.png",
     title: "Frontend Developer",
     date: "June 2020 - December 2023",
     responsibilities: [
-      "Built and maintained scalable user-facing features for a SaaS business analytics platform.",
-      "Led the UI/UX design, crafting intuitive dashboards and data visualization experiences.",
-      "Enhanced performance and scalability for handling complex, high-volume data workflows.",
+      "Developed a React-based restaurant website with reusable components for dishes, reservations, testimonials, and animated content sections.",
+      "Designed a mobile-friendly interface that makes menu discovery, ordering, and table booking quick and intuitive.",
+      "Structured the homepage around strong conversion paths, including featured dishes, reservation prompts, guest reviews, and location details.",
+      "Improved the brand experience with rich food visuals, clean spacing, responsive layouts, and hospitality-focused copy.",
+    ],
+    actions: [
+      {
+        label: "View Demo",
+        href: "https://nigeria-kitchen.vercel.app/",
+        variant: "primary",
+      },
+      {
+        label: "View Code",
+        href: "https://github.com/Engr-Shegez/E-commerce.git",
+      },
     ],
   },
   {
@@ -163,6 +186,17 @@ export const expCards = [
       "Integrated secure user authentication, payment processing such as Stripe, and role-based access for customers and admins.",
       "Optimized UI and UX for responsiveness and performance across devices.",
       "Led end-to-end development from database architecture to frontend deployment, ensuring scalability and maintainability.",
+    ],
+    actions: [
+      {
+        label: "View Demo",
+        href: "https://novagadget-store.vercel.app/",
+        variant: "primary",
+      },
+      {
+        label: "View Code",
+        href: "https://github.com/Engr-Shegez/Nova-store.git",
+      },
     ],
   },
 ];

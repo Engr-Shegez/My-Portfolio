@@ -137,11 +137,19 @@ export default function ShowcaseSection() {
                 </div>
                 <div className="space-y-5 px-1 pt-5">
                   <h3 className="text-xl font-semibold tracking-tight text-white md:text-2xl">
-                    Travel agency React dashboard
+                    TripNest
                   </h3>
+                  <p className="text-slate-300 md:text-lg">
+                    TripNest is a full-stack travel agency web app built with
+                    React Router, Appwrite, Gemini AI, Stripe, and Sentry. Users
+                    can generate custom travel itineraries, explore curated
+                    destinations, view trip details, and manage travel plans
+                    through an admin dashboard with real-time stats and user
+                    data.
+                  </p>
                   <div className="action-row">
                     <a
-                      href="https://github.com/Engr-Shegez/Travel-agency-admin-dashboard.git"
+                      href="https://github.com/Engr-Shegez/E-commerce.git"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="action-chip"
@@ -155,7 +163,7 @@ export default function ShowcaseSection() {
                       <span>{projectActions[0].label}</span>
                     </a>
                     <a
-                      href="https://travel-agency-admin-dashboard.vercel.app/"
+                      href="https://e-commerce-csa8.vercel.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="action-chip action-chip--primary"
@@ -177,14 +185,19 @@ export default function ShowcaseSection() {
               <article className="surface-card rounded-[1.75rem] p-4 md:p-5">
                 <div className="image-wrapper bg-white/[0.03]">
                   <img
-                    src="/images/e-commerce.png"
+                    src="/images/nexBuy.png"
                     alt="Nova Store ecommerce app"
                   />
                 </div>
                 <div className="space-y-5 px-1 pt-5">
                   <h3 className="text-xl font-semibold tracking-tight text-white md:text-2xl">
-                    Nova Store ecommerce with Stripe payments
+                    NexBuy E-commerce Platform with Stripe payments
                   </h3>
+                  <p className="text-slate-300 md:text-lg">
+                    A responsive e-commerce platform designed for smooth product
+                    discovery, cart management, and checkout preparation,
+                    powered by Next.js, Sanity CMS, and modern React tooling.
+                  </p>
                   <div className="action-row">
                     <a
                       href="https://github.com/Engr-Shegez/Nova-store.git"

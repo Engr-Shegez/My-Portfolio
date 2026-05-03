@@ -1,4 +1,5 @@
 import React from "react";
+import { Code2, ExternalLink } from "lucide-react";
 import TitleHeader from "../components/TitleHeader";
 import { expCards } from "../Constants";
 import GlowCard from "../components/GlowCard";
@@ -61,6 +62,31 @@ export default function ExperienceSection() {
                             </li>
                           ))}
                         </ul>
+
+                        {card.actions?.length ? (
+                          <div className="experience-actions" aria-label={`${card.title} links`}>
+                            {card.actions.map((action) => {
+                              const Icon = action.variant === "primary" ? ExternalLink : Code2;
+
+                              return (
+                                <a
+                                  key={action.label}
+                                  href={action.href}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className={`experience-action ${
+                                    action.variant === "primary"
+                                      ? "experience-action--primary"
+                                      : ""
+                                  }`}
+                                >
+                                  <Icon size={16} strokeWidth={2.2} aria-hidden="true" />
+                                  <span>{action.label}</span>
+                                </a>
+                              );
+                            })}
+                          </div>
+                        ) : null}
                       </div>
                     </div>
                   </div>
