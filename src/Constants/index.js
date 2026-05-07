@@ -22,6 +22,10 @@ export const navLinks = [
     link: "#work",
   },
   {
+    name: "About",
+    link: "#about",
+  },
+  {
     name: "Experience",
     link: "#experience",
   },
@@ -32,6 +36,29 @@ export const navLinks = [
   {
     name: "Contact",
     link: "#contact",
+  },
+];
+
+export const aboutHighlights = [
+  {
+    icon: "product",
+    title: "Product-minded builder",
+    desc: "I think beyond screens and focus on workflows, information hierarchy, and the decisions a user needs to make.",
+  },
+  {
+    icon: "learning",
+    title: "Curious and adaptable",
+    desc: "From AI interfaces to dashboards, commerce, travel, and 3D visuals, I enjoy learning the shape of a problem before choosing the right tools.",
+  },
+  {
+    icon: "polish",
+    title: "Detail-oriented execution",
+    desc: "I care about responsive behavior, spacing, performance, accessibility, and the small moments that make an interface feel professional.",
+  },
+  {
+    icon: "shipping",
+    title: "Focused on shipping",
+    desc: "I like building work that reaches production, handles real user paths, and stays maintainable after the first version is live.",
   },
 ];
 

@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./Sections/Hero";
 
 const ShowcaseSection = lazy(() => import("./Sections/ShowcaseSection"));
+const AboutSection = lazy(() => import("./Sections/AboutSection"));
 const LogoSection = lazy(() => import("./Sections/LogoSection"));
 const FeatureCards = lazy(() => import("./Sections/FeatureCards"));
 const ExperienceSection = lazy(() => import("./Sections/ExperienceSection"));
@@ -21,6 +22,7 @@ export default function App() {
         <Hero />
         <Suspense fallback={null}>
           <ShowcaseSection />
+          <AboutSection />
           <LogoSection />
           <FeatureCards />
           <ExperienceSection />
