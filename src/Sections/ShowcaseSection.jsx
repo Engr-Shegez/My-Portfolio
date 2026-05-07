@@ -35,7 +35,7 @@ export default function ShowcaseSection() {
                 <img src="/images/aiworkspace.png" alt="Thredline workspace" />
               </div>
               <div className="text-content">
-                <h2>Thredline, the AI-powered workspace</h2>
+                <h2>Threadline, the AI-powered workspace</h2>
                 <p className="text-slate-300 md:text-lg">
                   A modern AI workspace designed to centralize conversations,
                   context, and task flow into one responsive interface. The
@@ -107,7 +107,7 @@ export default function ShowcaseSection() {
                       <span>{projectActions[0].label}</span>
                     </a>
                     <a
-                      href="https://novagadget-store.vercel.app/"
+                      href="https://metricly-wzql.vercel.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="action-chip action-chip--primary"

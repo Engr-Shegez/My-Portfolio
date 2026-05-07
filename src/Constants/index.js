@@ -140,7 +140,7 @@ export const expCards = [
     actions: [
       {
         label: "View Demo",
-        href: "https://novagadget-store.vercel.app/",
+        href: "https://metricly-wzql.vercel.app/",
         variant: "primary",
       },
       {
@@ -151,8 +151,35 @@ export const expCards = [
   },
   {
     review:
+      "I built Threadline, a premium AI workspace that helps users turn scattered ideas, chats, and inputs into clearer decisions and faster execution.",
+    imgPath: "/images/threadline.png",
+    logoPath: "/images/threadline.png",
+    title: "Full-Stack Developer",
+    date: "2026",
+    responsibilities: [
+      "Developed a modern Next.js application with a polished marketing website, authenticated dashboard, and reusable UI components.",
+      "Integrated Clerk authentication so users can securely sign in, access protected dashboard routes, and see their signed-in account identity across the interface.",
+      "Built an AI-powered workspace experience with chat-focused layouts, dashboard navigation, command dialogs, and responsive interaction patterns.",
+      "Designed a premium, mobile-friendly interface with dark mode support, smooth animations, clean spacing, and conversion-focused landing sections.",
+    ],
+    actions: [
+      {
+        label: "View Demo",
+        href: "https://ai-workspace-theta.vercel.app/",
+        variant: "primary",
+      },
+      {
+        label: "View Code",
+        href: "https://github.com/Engr-Shegez/Ai-workspace.git",
+      },
+    ],
+  },
+
+  {
+    review:
       "I built a responsive restaurant platform for a Nigerian food brand, combining polished visual design with practical ordering and reservation flows.",
-    logoPath: "/images/logo2.png",
+    imgPath: "/images/savege.png",
+    logoPath: "/images/savege-Copy.png",
     title: "Frontend Developer",
     date: "June 2020 - December 2023",
     responsibilities: [
@@ -169,7 +196,7 @@ export const expCards = [
       },
       {
         label: "View Code",
-        href: "https://github.com/Engr-Shegez/E-commerce.git",
+        href: "https://github.com/Engr-Shegez/Nigeria-kitchen.git",
       },
     ],
   },
