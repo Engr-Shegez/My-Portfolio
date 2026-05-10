@@ -180,7 +180,7 @@ export const expCards = [
     review:
       "I built Threadline, a premium AI workspace that helps users turn scattered ideas, chats, and inputs into clearer decisions and faster execution.",
     imgPath: "/images/threadline.png",
-    logoPath: "/images/threadline.png",
+    logoPath: "/images/threadline - Copy.png",
     title: "Full-Stack Developer",
     date: "2026",
     responsibilities: [
@@ -206,7 +206,7 @@ export const expCards = [
     review:
       "I built a responsive restaurant platform for a Nigerian food brand, combining polished visual design with practical ordering and reservation flows.",
     imgPath: "/images/savege.png",
-    logoPath: "/images/savege-Copy.png",
+    logoPath: "/images/savege - Copy.png",
     title: "Frontend Developer",
     date: "June 2020 - December 2023",
     responsibilities: [

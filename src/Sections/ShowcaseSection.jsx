@@ -163,7 +163,7 @@ export default function ShowcaseSection() {
                       <span>{projectActions[0].label}</span>
                     </a>
                     <a
-                      href="https://e-commerce-csa8.vercel.app/"
+                      href="https://travel-agency-admin-dashboard.vercel.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="action-chip action-chip--primary"
@@ -214,7 +214,7 @@ export default function ShowcaseSection() {
                       <span>{projectActions[0].label}</span>
                     </a>
                     <a
-                      href="https://novagadget-store.vercel.app/"
+                      href="https://e-commerce-csa8.vercel.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="action-chip action-chip--primary"
