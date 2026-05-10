@@ -36,7 +36,7 @@ export default function MobileHeroVisual() {
     const y = (event.clientY - bounds.top) / bounds.height - 0.5;
 
     setTilt({
-      x: Number((x * 12).toFixed(2)),
+      x: Number((x * 15).toFixed(2)),
       y: Number((y * -10).toFixed(2)),
     });
   }, []);
