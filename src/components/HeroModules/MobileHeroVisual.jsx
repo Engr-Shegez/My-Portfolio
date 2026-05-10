@@ -13,6 +13,10 @@ const projectTabs = [
     label: "NexBuy",
     image: "/images/nexBuy.png",
   },
+  {
+    label: "Savage",
+    image: "/images/fullsavege.png",
+  },
 ];
 
 const codeLines = [
