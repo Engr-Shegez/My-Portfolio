@@ -333,7 +333,7 @@ export const socialImgs = [
   },
   {
     name: "linkedin",
-    url: "www.linkedin.com/in/adeoluwasegun",
+    url: "https:linkedin.com/in/adeoluwasegun",
     imgPath: "/images/linkedin.png",
   },
 ];
