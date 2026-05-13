@@ -318,22 +318,22 @@ export const testimonials = [
 export const socialImgs = [
   {
     name: "Github",
-    url: "https://www.instagram.com/",
+    url: "https://github.com/Engr-Shegez",
     imgPath: "/images/github.png",
   },
   {
     name: "Tiktok",
-    url: "https://www.facebook.com/",
+    url: "https://www.tiktok.com/@codewithshegez?_r=1&_t=ZS-96KuTt578xm",
     imgPath: "/images/tiktok.png",
   },
   {
     name: "x",
-    url: "https://www.x.com/",
+    url: "https://x.com/EngrShegez001",
     imgPath: "/images/x.png",
   },
   {
     name: "linkedin",
-    url: "https://www.linkedin.com/",
+    url: "www.linkedin.com/in/adeoluwasegun",
     imgPath: "/images/linkedin.png",
   },
 ];

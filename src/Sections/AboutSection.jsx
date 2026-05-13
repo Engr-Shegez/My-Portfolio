@@ -39,12 +39,12 @@ export default function AboutSection() {
                     I&apos;m Elijah, a frontend-focused developer who enjoys
                     turning ambitious ideas into clean, responsive, and useful
                     digital products. My work sits between design sensitivity
-                    and engineering discipline: I care about how an interface
+                    and engineering discipline. I care about how an interface
                     looks, how fast it feels, and how clearly it helps someone
                     complete a task.
                   </p>
                   <p className="leading-8 text-slate-300 md:text-lg">
-                    The projects I&apos;ve built reflect the kind of person I am:
+                    The projects I&apos;ve built reflect the kind of person I am
                     curious enough to explore AI workspaces, practical enough to
                     build SaaS dashboards and e-commerce flows, and thoughtful
                     enough to shape travel and restaurant experiences around
@@ -53,10 +53,10 @@ export default function AboutSection() {
                   </p>
                   <p className="leading-8 text-slate-300 md:text-lg">
                     I bring steady communication, patience in debugging, and a
-                    high standard for detail. Whether I&apos;m building with React,
-                    Next.js, Tailwind, backend services, payments, CMS tools, or
-                    3D interactions, my goal stays the same: create work that
-                    feels reliable, modern, and easy to trust.
+                    high standard for detail. Whether I&apos;m building with
+                    React, Next.js, Tailwind, backend services, payments, CMS
+                    tools, or 3D interactions, my goal stays the same: create
+                    work that feels reliable, modern, and easy to trust.
                   </p>
                 </div>
 
