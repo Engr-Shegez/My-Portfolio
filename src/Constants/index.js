@@ -229,17 +229,17 @@ export const expCards = [
   },
   {
     review:
-      "Elijah designed and developed a full-stack e-commerce application, demonstrating strong technical expertise and a customer-centric approach. The final product provided a smooth, intuitive shopping experience and highlighted Elijah's ability to handle both frontend and backend development with efficiency and creativity.",
+      "Designed and developed a crypto tax-loss harvesting dashboard enabling real-time portfolio analysis, capital gains comparison, and interactive tax-saving simulations through intuitive financial workflows.",
     imgPath: "/images/exp4.png",
     logoPath: "/images/logo4.png",
     title: "Full Stack Developer",
     date: "March 2019 - May 2020",
     responsibilities: [
-      "Designed and built a full-stack e-commerce application using React, Node.js, Express, and MongoDB.",
-      "Implemented core features such as product catalog, shopping cart, checkout, and order management.",
-      "Integrated secure user authentication, payment processing such as Stripe, and role-based access for customers and admins.",
-      "Optimized UI and UX for responsiveness and performance across devices.",
-      "Led end-to-end development from database architecture to frontend deployment, ensuring scalability and maintainability.",
+      "Designed and built a crypto tax-loss harvesting dashboard using React, Redux Toolkit, Vite, and Tailwind CSS.",
+      "Implemented core features such as portfolio holdings display, sortable asset table, row selection, select-all behavior, and real-time harvesting simulation.",
+      "Built pre-harvesting and after-harvesting summary cards to compare short-term gains, long-term gains, losses, and total realized capital gains.",
+      "Used Redux state management to keep selected assets, capital gains data, and projected harvesting outcomes predictable and easy to maintain.",
+      "Structured the project with mocked API data, reusable components, and clean formatting utilities, making it ready for future backend integration.",
     ],
     actions: [
       {

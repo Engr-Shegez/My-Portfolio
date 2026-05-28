@@ -11,7 +11,7 @@ const Testimonials = () => {
         <RevealOnScroll>
           <TitleHeader
             title="What People Say About me"
-            sub="💫 Collegue's Feedback Highlights"
+            sub="Collegue's Feedback Highlights"
           />
         </RevealOnScroll>
 
@@ -28,8 +28,12 @@ const Testimonials = () => {
                     />
                   </div>
                   <div>
-                    <p className="font-semibold tracking-tight text-white">{name}</p>
-                    <p className="text-sm leading-6 text-slate-400">{mentions}</p>
+                    <p className="font-semibold tracking-tight text-white">
+                      {name}
+                    </p>
+                    <p className="text-sm leading-6 text-slate-400">
+                      {mentions}
+                    </p>
                   </div>
                 </div>
               </GlowCard>
