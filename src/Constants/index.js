@@ -244,12 +244,12 @@ export const expCards = [
     actions: [
       {
         label: "View Demo",
-        href: "https://novagadget-store.vercel.app/",
+        href: "https://tax-harvester-seven.vercel.app/",
         variant: "primary",
       },
       {
         label: "View Code",
-        href: "https://github.com/Engr-Shegez/Nova-store.git",
+        href: "https://github.com/Engr-Shegez/TAX-HARVESTER.git",
       },
     ],
   },
