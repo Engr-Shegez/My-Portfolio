@@ -22,6 +22,10 @@ export const navLinks = [
     link: "#work",
   },
   {
+    name: "Services",
+    link: "#services",
+  },
+  {
     name: "About",
     link: "#about",
   },
@@ -36,6 +40,151 @@ export const navLinks = [
   {
     name: "Contact",
     link: "#contact",
+  },
+];
+
+export const servicesSection = {
+  label: "Services",
+  headline: {
+    before: "Websites and systems built to help your business",
+    accent: "grow",
+  },
+  value:
+    "I help founders, small businesses, creators, and growing teams turn their ideas into clean, responsive, high-performing digital experiences. From landing pages to full business systems, I build websites that look professional, work smoothly, and support real business goals.",
+};
+
+export const serviceCards = [
+  {
+    title: "Complete Business Website Development",
+    tagline:
+      "A polished, responsive website built to present your brand and convert visitors into clients.",
+    bestFor: [
+      "Small businesses launching or upgrading online",
+      "Service providers who need a professional website",
+      "Startups that need a clean, scalable web presence",
+    ],
+    price: "From $700",
+    timeline: "2-4 weeks",
+    featured: true,
+    icon: "website",
+    deliverables: [
+      "Custom responsive website design",
+      "Homepage plus key business pages",
+      "Clear call-to-action sections",
+      "Mobile, tablet, and desktop optimization",
+      "Contact form or inquiry flow",
+      "Basic SEO structure",
+      "Deployment support",
+    ],
+  },
+  {
+    title: "Landing Page Development",
+    tagline:
+      "A focused, high-converting page designed to turn traffic into leads, signups, or sales.",
+    bestFor: [
+      "Product launches",
+      "Campaigns, ads, and lead generation offers",
+      "Coaches, consultants, and service providers",
+    ],
+    price: "From $300",
+    timeline: "5-10 days",
+    icon: "landing",
+    deliverables: [
+      "Custom landing page layout",
+      "Conversion-focused copy structure",
+      "Hero, benefits, proof, and CTA sections",
+      "Responsive frontend development",
+      "Lead capture form integration",
+      "Performance optimization",
+      "Deployment-ready final page",
+    ],
+  },
+  {
+    title: "Website Maintenance & Bug Fixing",
+    tagline: "Keep your website running smoothly, securely, and professionally.",
+    bestFor: [
+      "Businesses with existing websites",
+      "Founders who need ongoing technical support",
+      "Teams with small fixes or performance issues",
+    ],
+    price: "From $100/mo",
+    timeline: "24-72 hours",
+    icon: "maintenance",
+    deliverables: [
+      "Bug diagnosis and fixing",
+      "Layout and responsiveness fixes",
+      "Website content updates",
+      "Performance improvements",
+      "Broken link and form checks",
+      "Minor design adjustments",
+      "Ongoing support options",
+    ],
+  },
+  {
+    title: "Admin Dashboard & Business Systems",
+    tagline:
+      "Custom dashboards and internal tools that help you manage your business more efficiently.",
+    bestFor: [
+      "Businesses tracking orders, users, or data",
+      "Teams replacing manual spreadsheets",
+      "Startups needing MVP business tools",
+    ],
+    price: "From $1,200",
+    timeline: "3-6 weeks",
+    icon: "dashboard",
+    deliverables: [
+      "Custom dashboard interface",
+      "User-friendly data management screens",
+      "Authentication flow",
+      "Charts, tables, and filters",
+      "API or backend integration",
+      "Role-based access setup",
+      "Responsive admin layout",
+    ],
+  },
+  {
+    title: "Portfolio Website Development",
+    tagline:
+      "A standout personal website that showcases your work, skills, and credibility.",
+    bestFor: [
+      "Developers, designers, and creatives",
+      "Freelancers building their personal brand",
+      "Professionals applying for jobs or clients",
+    ],
+    price: "From $400",
+    timeline: "1-2 weeks",
+    icon: "portfolio",
+    deliverables: [
+      "Custom portfolio design",
+      "Project showcase sections",
+      "About, skills, and contact sections",
+      "Smooth animations and interactions",
+      "Responsive development",
+      "Resume or CV link integration",
+      "Deployment support",
+    ],
+  },
+  {
+    title: "Web Design & UI Improvement",
+    tagline:
+      "Upgrade your existing website with a cleaner, more modern, and easier-to-use interface.",
+    bestFor: [
+      "Businesses with outdated websites",
+      "SaaS or dashboard products needing better UI",
+      "Founders who want a more polished user experience",
+    ],
+    price: "From $250",
+    timeline: "5-14 days",
+    icon: "design",
+    deliverables: [
+      "UI audit and improvement suggestions",
+      "Redesigned sections or screens",
+      "Better spacing, typography, and layout",
+      "Improved mobile responsiveness",
+      "Button, form, and navigation refinements",
+      "Visual hierarchy improvements",
+      "Developer-ready design direction",
+    ],
   },
 ];
 
