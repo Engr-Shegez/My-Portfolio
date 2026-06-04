@@ -8,6 +8,7 @@ const AboutSection = lazy(() => import("./Sections/AboutSection"));
 const LogoSection = lazy(() => import("./Sections/LogoSection"));
 const FeatureCards = lazy(() => import("./Sections/FeatureCards"));
 const ServicesPricing = lazy(() => import("./Sections/ServicesPricing"));
+const ProcessSection = lazy(() => import("./Sections/ProcessSection"));
 const ExperienceSection = lazy(() => import("./Sections/ExperienceSection"));
 const TechStack = lazy(() => import("./Sections/TechStack"));
 const Testimonials = lazy(() => import("./Sections/Testimonials"));
@@ -27,6 +28,7 @@ export default function App() {
           <LogoSection />
           <FeatureCards />
           <ServicesPricing />
+          <ProcessSection />
           <ExperienceSection />
           <TechStack />
           <Testimonials />

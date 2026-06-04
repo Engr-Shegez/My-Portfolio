@@ -188,6 +188,47 @@ export const serviceCards = [
   },
 ];
 
+export const processSection = {
+  label: "Workflow",
+  headline: {
+    before: "A clear, collaborative process from idea to",
+    accent: "launch",
+  },
+  subheadline:
+    "Working together should feel simple, organized, and stress-free. I guide each project with clear communication, practical checkpoints, and a workflow that keeps every decision easy to understand.",
+};
+
+export const processSteps = [
+  {
+    number: "STEP 01",
+    title: "Discovery & Project Fit",
+    icon: "discovery",
+    description:
+      "We start with a focused conversation about your goals, users, current challenges, and what success should look like. You share your idea, references, requirements, or pain points, and I help clarify the best direction. By the end, we both understand what needs to be built and whether the scope is a strong fit.",
+  },
+  {
+    number: "STEP 02",
+    title: "Scope, Strategy & Plan",
+    icon: "strategy",
+    description:
+      "I turn the discovery notes into a clear project plan covering the key features, pages, user flows, timeline, and deliverables. You review the plan, confirm priorities, and ask questions before development begins. This removes guesswork and gives us a shared roadmap for the full project.",
+  },
+  {
+    number: "STEP 03",
+    title: "Design & Development",
+    icon: "development",
+    description:
+      "I build the website, dashboard, or business system with regular progress updates so you always know what is happening. You provide feedback at key checkpoints without being overwhelmed by constant decisions. The outcome is a polished, responsive, and functional product shaped around your real business needs.",
+  },
+  {
+    number: "STEP 04",
+    title: "Review, Launch & Support",
+    icon: "launch",
+    description:
+      "Before launch, we review the final work together, test important user flows, and make the final refinements. Once everything is approved, I help with deployment and make sure the project is ready for real users. After launch, you get support for small fixes, handoff notes, and practical next-step recommendations.",
+  },
+];
+
 export const aboutHighlights = [
   {
     icon: "product",

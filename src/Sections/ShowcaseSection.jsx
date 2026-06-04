@@ -20,7 +20,7 @@ export default function ShowcaseSection() {
       <div className="w-full">
         <RevealOnScroll className="mb-10 max-w-2xl md:mb-14">
           <div className="hero-badge">
-            <p className="font-semibold text-sky-100  ">My works</p>
+            <p className="font-semibold text-sky-100  ">What I've Built</p>
           </div>
           <h2 className="mt-4 max-w-3xl text-2xl font-semibold tracking-tight text-sky-200 md:text-5xl md:leading-[1.02]">
             Product work shaped around clarity, responsiveness, and real-world
