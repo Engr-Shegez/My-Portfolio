@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="ae-logo-title">
+  <title id="ae-logo-title">AE monogram logo</title>
+  <rect width="512" height="512" fill="#050505" />
+  <g
+    font-family="Didot, 'Bodoni 72', 'Bodoni MT', 'Libre Bodoni', Georgia, 'Times New Roman', serif"
+    font-weight="600"
+    text-anchor="middle"
+  >
+    <text
+      x="211"
+      y="329"
+      fill="#f7f7f2"
+      font-size="246"
+      letter-spacing="-20"
+    >A</text>
+    <text
+      x="313"
+      y="326"
+      fill="#d4d4ce"
+      stroke="#050505"
+      stroke-width="9"
+      paint-order="stroke fill"
+      font-size="226"
+      letter-spacing="-18"
+    >E</text>
+  </g>
+</svg>

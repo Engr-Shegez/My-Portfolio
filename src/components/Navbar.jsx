@@ -75,17 +75,17 @@ export default function Navbar() {
         >
           <div className="flex items-center justify-between gap-3 px-4 py-3 sm:px-5">
             <a
-              className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.24em] text-slate-100 transition-colors hover:text-white"
+              className="inline-flex items-center transition-opacity hover:opacity-90"
               href="#hero"
+              aria-label="Adeleke Elijah home"
               onClick={() => setIsOpen(false)}
             >
-              <span className="inline-flex size-2 rounded-full bg-cyan-300 shadow-[0_0_14px_rgba(103,232,249,0.45)]" />
-              Elijah
-              {/* <img
-                src="/images/my-logo.jpg"
-                alt="name"
-                className="size-14 object-cover md:size-16"
-              /> */}
+              <img
+                src="/images/ae-monogram.svg"
+                alt=""
+                aria-hidden="true"
+                className="size-11 object-contain sm:size-12"
+              />
             </a>
 
             <nav className="hidden items-center gap-1 rounded-full border border-white/6 bg-white/[0.03] p-1 md:flex">
