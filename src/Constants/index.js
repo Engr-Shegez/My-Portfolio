@@ -63,7 +63,7 @@ export const serviceCards = [
       "Service providers who need a professional website",
       "Startups that need a clean, scalable web presence",
     ],
-    price: "From $700",
+    price: "From $300+",
     timeline: "2-4 weeks",
     featured: true,
     icon: "website",
@@ -86,7 +86,7 @@ export const serviceCards = [
       "Campaigns, ads, and lead generation offers",
       "Coaches, consultants, and service providers",
     ],
-    price: "From $300",
+    price: "From $60+",
     timeline: "5-10 days",
     icon: "landing",
     deliverables: [
@@ -101,7 +101,8 @@ export const serviceCards = [
   },
   {
     title: "Website Maintenance & Bug Fixing",
-    tagline: "Keep your website running smoothly, securely, and professionally.",
+    tagline:
+      "Keep your website running smoothly, securely, and professionally.",
     bestFor: [
       "Businesses with existing websites",
       "Founders who need ongoing technical support",
@@ -129,7 +130,7 @@ export const serviceCards = [
       "Teams replacing manual spreadsheets",
       "Startups needing MVP business tools",
     ],
-    price: "From $1,200",
+    price: "From $900+",
     timeline: "3-6 weeks",
     icon: "dashboard",
     deliverables: [
@@ -151,7 +152,7 @@ export const serviceCards = [
       "Freelancers building their personal brand",
       "Professionals applying for jobs or clients",
     ],
-    price: "From $400",
+    price: "From $200",
     timeline: "1-2 weeks",
     icon: "portfolio",
     deliverables: [
@@ -173,7 +174,7 @@ export const serviceCards = [
       "SaaS or dashboard products needing better UI",
       "Founders who want a more polished user experience",
     ],
-    price: "From $250",
+    price: "From $150",
     timeline: "5-14 days",
     icon: "design",
     deliverables: [
@@ -281,6 +282,11 @@ export const abilities = [
     imgPath: "/images/time.png",
     title: "On-Time Delivery",
     desc: "Ensuring projects are delivered on time with exceptional quality and efficiency.",
+  },
+  {
+    imgPath: "/images/money.png",
+    title: "Affordable Pricing",
+    desc: "Premium quality at a price that makes sense. No agency overhead, you work directly with me.",
   },
 ];
 
